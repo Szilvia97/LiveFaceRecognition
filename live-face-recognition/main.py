@@ -1,5 +1,5 @@
-from cProfile import label
-from gevent import config
+# from cProfile import label
+# from gevent import config
 from face_recognizer import FaceRecognizer
 from live_recognizer import LiveeeeRecognizer
 from camera_stream import CameraStream
@@ -35,13 +35,13 @@ def main():
 
         frame = camera_streamer.get_latest_frame()
 
+        # TODO: add to config: draw rectangle around detection
+        # TODO: return a list of face_detection_data and list of live_detection_data
         face_names, frame = face_rec.process_frame(frame)
-        live_scores, frame = live_rec.process_frame(frame)
+        detection_list, frame = live_rec.process_frame(frame)
 
         logging.info("Face detected -- {}".format(face_names))
         # logging.info("Live score -- {}".format(live_scores))
-
-        cv2.imshow('Video', frame)
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
@@ -50,20 +50,14 @@ def main():
             logging.info('nobody')
 
         else:
-                # multiple faces detected
+            # multiple faces detected
+            for detection in detection_list:
+                # TODO: draw if needed, see config
+                cv2.rectangle(frame, (detection.startX, detection.startY), (detection.endX, detection.endY), (0, 0, 255), 2)
+                logging.debug(f"COG: {detection.get_COG()}")
+            # TODO: find COGs that are closest
 
-                # TODO how to map recognized name with recognized score
-                # names = [unknown, pistike, marcika, unkown]
-                # live = [0.7, 0.9, 0.6]
-
-            for name in face_names:
-                if name == 'unkown':
-                    logging.info('unkown')
-                # else:
-                #     if live_scores[name]:
-                #         logging.info('name is live')
-                #     else:
-                #         logging.info('name is fake')
+        cv2.imshow('Video', frame)
 
 
 if __name__ == '__main__':

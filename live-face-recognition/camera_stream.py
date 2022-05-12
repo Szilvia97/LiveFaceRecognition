@@ -23,6 +23,7 @@ class CameraStream:
         self.stream.set(cv2.CAP_PROP_FRAME_HEIGHT, self.height)
         self.stream.set(cv2.CAP_PROP_FPS, self.fps)
 
+        self.img = cv2.imread('1.jpg')
         if not self.stream.isOpened():
             logging.info(f'Failed to open camera: {self.streamId}')
             exit(1)
@@ -33,7 +34,8 @@ class CameraStream:
 
     def get_latest_frame(self) -> np.array:
         self.read_lock.acquire()
-        frame = self.frame.copy()
+        # frame = self.frame.copy()
+        frame = self.img
         self.read_lock.release()
         return frame
 

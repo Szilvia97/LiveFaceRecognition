@@ -1,1018 +1,458 @@
-2022-05-12 15:05:40,508  INFO WorkerThread Start
-2022-05-12 15:05:40,513 DEBUG MainThread STREAM b'IHDR' 16 13
-2022-05-12 15:05:40,514 DEBUG MainThread STREAM b'IDAT' 41 8192
-2022-05-12 15:05:40,917 DEBUG MainThread STREAM b'IHDR' 16 13
-2022-05-12 15:05:40,917 DEBUG MainThread STREAM b'IDAT' 41 8192
-2022-05-12 15:05:41,302 DEBUG MainThread STREAM b'IHDR' 16 13
-2022-05-12 15:05:41,302 DEBUG MainThread STREAM b'IDAT' 41 8192
-2022-05-12 15:05:41,691 DEBUG MainThread STREAM b'IHDR' 16 13
-2022-05-12 15:05:41,691 DEBUG MainThread STREAM b'IDAT' 41 8192
-2022-05-12 15:05:42,840 DEBUG MainThread STREAM b'IHDR' 16 13
-2022-05-12 15:05:42,841 DEBUG MainThread STREAM b'IDAT' 41 8192
-2022-05-12 15:05:43,232  INFO MainThread Loading face detector...
-2022-05-12 15:05:43,247  INFO MainThread Loading Model...
-2022-05-12 15:05:43,954  INFO MainThread Live/Fake score -- fake: 0.9985
-2022-05-12 15:05:43,955  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:44,143  INFO MainThread Live/Fake score -- fake: 0.9979
-2022-05-12 15:05:44,144  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:44,258  INFO MainThread Live/Fake score -- fake: 0.9986
-2022-05-12 15:05:44,259  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:44,379  INFO MainThread Live/Fake score -- fake: 0.9983
-2022-05-12 15:05:44,380  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:44,491  INFO MainThread Live/Fake score -- fake: 0.9991
-2022-05-12 15:05:44,492  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:44,600  INFO MainThread Live/Fake score -- fake: 0.9998
-2022-05-12 15:05:44,600  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:44,707  INFO MainThread Live/Fake score -- fake: 0.9785
-2022-05-12 15:05:44,708  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:44,817  INFO MainThread Live/Fake score -- fake: 0.9998
-2022-05-12 15:05:44,817  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:44,925  INFO MainThread Live/Fake score -- fake: 0.7770
-2022-05-12 15:05:44,926  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:45,033  INFO MainThread Live/Fake score -- fake: 0.9943
-2022-05-12 15:05:45,034  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:45,143  INFO MainThread Live/Fake score -- fake: 0.9897
-2022-05-12 15:05:45,143  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:45,256  INFO MainThread Live/Fake score -- fake: 0.9349
-2022-05-12 15:05:45,257  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:45,367  INFO MainThread Live/Fake score -- fake: 0.9592
-2022-05-12 15:05:45,368  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:45,482  INFO MainThread Live/Fake score -- fake: 0.9997
-2022-05-12 15:05:45,483  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:45,593  INFO MainThread Live/Fake score -- fake: 0.9982
-2022-05-12 15:05:45,594  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:45,702  INFO MainThread Live/Fake score -- fake: 0.9221
-2022-05-12 15:05:45,703  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:45,811  INFO MainThread Live/Fake score -- fake: 0.9497
-2022-05-12 15:05:45,811  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:45,919  INFO MainThread Live/Fake score -- fake: 0.9107
-2022-05-12 15:05:45,920  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:46,026  INFO MainThread Live/Fake score -- real: 0.6238
-2022-05-12 15:05:46,027  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:46,135  INFO MainThread Live/Fake score -- fake: 0.9017
-2022-05-12 15:05:46,135  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:46,246  INFO MainThread Live/Fake score -- fake: 0.8881
-2022-05-12 15:05:46,246  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:46,357  INFO MainThread Live/Fake score -- fake: 0.9222
-2022-05-12 15:05:46,358  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:46,466  INFO MainThread Live/Fake score -- real: 0.8334
-2022-05-12 15:05:46,466  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:46,574  INFO MainThread Live/Fake score -- fake: 0.9995
-2022-05-12 15:05:46,575  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:46,683  INFO MainThread Live/Fake score -- fake: 0.9929
-2022-05-12 15:05:46,684  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:46,794  INFO MainThread Live/Fake score -- fake: 0.9903
-2022-05-12 15:05:46,795  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:46,905  INFO MainThread Live/Fake score -- fake: 0.9997
-2022-05-12 15:05:46,906  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:47,014  INFO MainThread Live/Fake score -- fake: 0.9999
-2022-05-12 15:05:47,014  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:47,123  INFO MainThread Live/Fake score -- fake: 0.9999
-2022-05-12 15:05:47,124  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:47,231  INFO MainThread Live/Fake score -- fake: 0.9999
-2022-05-12 15:05:47,232  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:47,342  INFO MainThread Live/Fake score -- real: 0.6926
-2022-05-12 15:05:47,343  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:47,454  INFO MainThread Live/Fake score -- fake: 0.9996
-2022-05-12 15:05:47,455  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:47,567  INFO MainThread Live/Fake score -- fake: 0.9825
-2022-05-12 15:05:47,568  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:47,679  INFO MainThread Live/Fake score -- fake: 0.9804
-2022-05-12 15:05:47,680  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:47,791  INFO MainThread Live/Fake score -- fake: 0.9897
-2022-05-12 15:05:47,792  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:47,904  INFO MainThread Live/Fake score -- fake: 0.9892
-2022-05-12 15:05:47,905  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:48,016  INFO MainThread Live/Fake score -- fake: 0.9992
-2022-05-12 15:05:48,017  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:48,126  INFO MainThread Live/Fake score -- fake: 0.9890
-2022-05-12 15:05:48,127  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:48,237  INFO MainThread Live/Fake score -- fake: 0.9993
-2022-05-12 15:05:48,237  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:48,349  INFO MainThread Live/Fake score -- fake: 0.9396
-2022-05-12 15:05:48,349  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:48,462  INFO MainThread Live/Fake score -- fake: 0.9344
-2022-05-12 15:05:48,463  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:48,586  INFO MainThread Live/Fake score -- fake: 0.8581
-2022-05-12 15:05:48,587  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:48,700  INFO MainThread Live/Fake score -- fake: 0.9468
-2022-05-12 15:05:48,701  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:48,808  INFO MainThread Live/Fake score -- fake: 0.7045
-2022-05-12 15:05:48,809  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:48,950  INFO MainThread Live/Fake score -- fake: 0.6061
-2022-05-12 15:05:48,950  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:49,060  INFO MainThread Live/Fake score -- fake: 0.7223
-2022-05-12 15:05:49,061  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:49,169  INFO MainThread Live/Fake score -- fake: 0.8818
-2022-05-12 15:05:49,170  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:49,281  INFO MainThread Live/Fake score -- fake: 0.9872
-2022-05-12 15:05:49,281  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:49,389  INFO MainThread Live/Fake score -- fake: 0.9828
-2022-05-12 15:05:49,390  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:49,498  INFO MainThread Live/Fake score -- fake: 0.9880
-2022-05-12 15:05:49,499  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:49,610  INFO MainThread Live/Fake score -- fake: 0.9878
-2022-05-12 15:05:49,611  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:49,717  INFO MainThread Live/Fake score -- fake: 0.9868
-2022-05-12 15:05:49,717  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:49,824  INFO MainThread Live/Fake score -- fake: 0.9860
-2022-05-12 15:05:49,825  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:49,933  INFO MainThread Live/Fake score -- fake: 0.9283
-2022-05-12 15:05:49,933  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:50,041  INFO MainThread Live/Fake score -- fake: 0.9492
-2022-05-12 15:05:50,041  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:50,149  INFO MainThread Live/Fake score -- fake: 0.9974
-2022-05-12 15:05:50,149  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:50,257  INFO MainThread Live/Fake score -- fake: 0.9949
-2022-05-12 15:05:50,258  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:50,365  INFO MainThread Live/Fake score -- fake: 0.9951
-2022-05-12 15:05:50,366  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:50,476  INFO MainThread Live/Fake score -- fake: 0.9990
-2022-05-12 15:05:50,476  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:50,587  INFO MainThread Live/Fake score -- fake: 0.9995
-2022-05-12 15:05:50,588  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:50,696  INFO MainThread Live/Fake score -- fake: 0.9989
-2022-05-12 15:05:50,697  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:50,804  INFO MainThread Live/Fake score -- fake: 0.9988
-2022-05-12 15:05:50,804  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:50,913  INFO MainThread Live/Fake score -- fake: 0.9988
-2022-05-12 15:05:50,914  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:51,020  INFO MainThread Live/Fake score -- fake: 0.9990
-2022-05-12 15:05:51,021  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:51,131  INFO MainThread Live/Fake score -- fake: 0.9986
-2022-05-12 15:05:51,132  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:51,240  INFO MainThread Live/Fake score -- fake: 0.9983
-2022-05-12 15:05:51,240  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:51,348  INFO MainThread Live/Fake score -- fake: 0.9992
-2022-05-12 15:05:51,348  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:51,455  INFO MainThread Live/Fake score -- fake: 0.9992
-2022-05-12 15:05:51,456  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:51,567  INFO MainThread Live/Fake score -- fake: 0.9869
-2022-05-12 15:05:51,568  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:51,680  INFO MainThread Live/Fake score -- fake: 0.9986
-2022-05-12 15:05:51,681  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:51,792  INFO MainThread Live/Fake score -- fake: 1.0000
-2022-05-12 15:05:51,793  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:51,900  INFO MainThread Live/Fake score -- fake: 0.9988
-2022-05-12 15:05:51,901  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:52,009  INFO MainThread Live/Fake score -- fake: 0.9988
-2022-05-12 15:05:52,009  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:52,120  INFO MainThread Live/Fake score -- fake: 0.8834
-2022-05-12 15:05:52,120  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:52,231  INFO MainThread Live/Fake score -- fake: 0.9921
-2022-05-12 15:05:52,231  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:52,339  INFO MainThread Live/Fake score -- fake: 0.8215
-2022-05-12 15:05:52,339  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:52,449  INFO MainThread Live/Fake score -- fake: 0.9986
-2022-05-12 15:05:52,449  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:52,560  INFO MainThread Live/Fake score -- fake: 0.9179
-2022-05-12 15:05:52,560  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:52,672  INFO MainThread Live/Fake score -- fake: 0.9984
-2022-05-12 15:05:52,673  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:52,780  INFO MainThread Live/Fake score -- fake: 0.9987
-2022-05-12 15:05:52,781  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:52,890  INFO MainThread Live/Fake score -- fake: 0.9994
-2022-05-12 15:05:52,891  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:52,997  INFO MainThread Live/Fake score -- fake: 0.7877
-2022-05-12 15:05:52,998  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:53,109  INFO MainThread Live/Fake score -- fake: 0.6947
-2022-05-12 15:05:53,109  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:53,216  INFO MainThread Live/Fake score -- fake: 0.9516
-2022-05-12 15:05:53,217  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:53,323  INFO MainThread Live/Fake score -- fake: 0.9972
-2022-05-12 15:05:53,324  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:53,431  INFO MainThread Live/Fake score -- fake: 0.9972
-2022-05-12 15:05:53,431  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:53,542  INFO MainThread Live/Fake score -- fake: 0.9969
-2022-05-12 15:05:53,542  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:53,649  INFO MainThread Live/Fake score -- fake: 0.9975
-2022-05-12 15:05:53,650  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:53,761  INFO MainThread Live/Fake score -- fake: 0.9972
-2022-05-12 15:05:53,762  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:53,872  INFO MainThread Live/Fake score -- fake: 0.9974
-2022-05-12 15:05:53,872  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:53,980  INFO MainThread Live/Fake score -- fake: 0.9981
-2022-05-12 15:05:53,980  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:54,087  INFO MainThread Live/Fake score -- fake: 0.9991
-2022-05-12 15:05:54,087  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:54,197  INFO MainThread Live/Fake score -- fake: 0.9991
-2022-05-12 15:05:54,197  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:54,305  INFO MainThread Live/Fake score -- fake: 0.9870
-2022-05-12 15:05:54,306  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:54,413  INFO MainThread Live/Fake score -- fake: 0.9917
-2022-05-12 15:05:54,413  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:54,521  INFO MainThread Live/Fake score -- fake: 0.9981
-2022-05-12 15:05:54,521  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:54,633  INFO MainThread Live/Fake score -- fake: 0.9980
-2022-05-12 15:05:54,633  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:54,741  INFO MainThread Live/Fake score -- fake: 0.9981
-2022-05-12 15:05:54,742  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:54,853  INFO MainThread Live/Fake score -- fake: 0.9984
-2022-05-12 15:05:54,854  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:54,960  INFO MainThread Live/Fake score -- fake: 0.9983
-2022-05-12 15:05:54,960  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:55,067  INFO MainThread Live/Fake score -- fake: 0.9981
-2022-05-12 15:05:55,068  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:55,175  INFO MainThread Live/Fake score -- fake: 0.9975
-2022-05-12 15:05:55,176  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:55,283  INFO MainThread Live/Fake score -- fake: 0.9748
-2022-05-12 15:05:55,284  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:55,393  INFO MainThread Live/Fake score -- fake: 0.9975
-2022-05-12 15:05:55,393  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:55,500  INFO MainThread Live/Fake score -- fake: 0.7951
-2022-05-12 15:05:55,500  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:55,609  INFO MainThread Live/Fake score -- real: 0.5566
-2022-05-12 15:05:55,609  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:55,716  INFO MainThread Live/Fake score -- fake: 0.9950
-2022-05-12 15:05:55,716  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:55,809  INFO MainThread Live/Fake score -- real: 0.6383
-2022-05-12 15:05:55,809  INFO MainThread Face detected -- []
-2022-05-12 15:05:55,821  INFO MainThread nobody
-2022-05-12 15:05:55,918  INFO MainThread Live/Fake score -- fake: 0.5744
-2022-05-12 15:05:55,918  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:56,028  INFO MainThread Live/Fake score -- real: 0.9771
-2022-05-12 15:05:56,029  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:56,136  INFO MainThread Live/Fake score -- real: 0.6158
-2022-05-12 15:05:56,137  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:56,243  INFO MainThread Live/Fake score -- real: 0.7011
-2022-05-12 15:05:56,244  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:56,350  INFO MainThread Live/Fake score -- real: 0.6888
-2022-05-12 15:05:56,350  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:56,461  INFO MainThread Live/Fake score -- fake: 0.5366
-2022-05-12 15:05:56,461  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:56,568  INFO MainThread Live/Fake score -- real: 0.5666
-2022-05-12 15:05:56,569  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:56,676  INFO MainThread Live/Fake score -- real: 0.8447
-2022-05-12 15:05:56,677  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:56,784  INFO MainThread Live/Fake score -- real: 0.8174
-2022-05-12 15:05:56,784  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:56,897  INFO MainThread Live/Fake score -- real: 0.7441
-2022-05-12 15:05:56,898  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:57,007  INFO MainThread Live/Fake score -- fake: 0.5885
-2022-05-12 15:05:57,007  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:57,116  INFO MainThread Live/Fake score -- real: 0.7519
-2022-05-12 15:05:57,116  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:57,224  INFO MainThread Live/Fake score -- fake: 0.5603
-2022-05-12 15:05:57,224  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:57,332  INFO MainThread Live/Fake score -- fake: 0.5460
-2022-05-12 15:05:57,333  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:57,440  INFO MainThread Live/Fake score -- fake: 0.5705
-2022-05-12 15:05:57,440  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:57,548  INFO MainThread Live/Fake score -- fake: 0.5877
-2022-05-12 15:05:57,549  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:57,656  INFO MainThread Live/Fake score -- fake: 0.5943
-2022-05-12 15:05:57,657  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:57,764  INFO MainThread Live/Fake score -- fake: 0.6202
-2022-05-12 15:05:57,764  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:57,876  INFO MainThread Live/Fake score -- fake: 0.5990
-2022-05-12 15:05:57,877  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:57,985  INFO MainThread Live/Fake score -- real: 0.8873
-2022-05-12 15:05:57,985  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:58,096  INFO MainThread Live/Fake score -- real: 0.8045
-2022-05-12 15:05:58,097  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:58,203  INFO MainThread Live/Fake score -- fake: 0.5865
-2022-05-12 15:05:58,204  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:58,311  INFO MainThread Live/Fake score -- real: 0.8862
-2022-05-12 15:05:58,312  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:58,420  INFO MainThread Live/Fake score -- real: 0.6443
-2022-05-12 15:05:58,420  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:58,529  INFO MainThread Live/Fake score -- real: 0.9600
-2022-05-12 15:05:58,530  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:58,636  INFO MainThread Live/Fake score -- real: 0.8829
-2022-05-12 15:05:58,637  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:58,745  INFO MainThread Live/Fake score -- real: 0.5467
-2022-05-12 15:05:58,745  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:58,855  INFO MainThread Live/Fake score -- fake: 0.5678
-2022-05-12 15:05:58,855  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:58,969  INFO MainThread Live/Fake score -- fake: 0.5792
-2022-05-12 15:05:58,970  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:59,078  INFO MainThread Live/Fake score -- fake: 0.5592
-2022-05-12 15:05:59,079  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:59,190  INFO MainThread Live/Fake score -- fake: 0.5662
-2022-05-12 15:05:59,190  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:59,300  INFO MainThread Live/Fake score -- fake: 0.5421
-2022-05-12 15:05:59,301  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:59,408  INFO MainThread Live/Fake score -- fake: 0.5577
-2022-05-12 15:05:59,409  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:59,517  INFO MainThread Live/Fake score -- fake: 0.5730
-2022-05-12 15:05:59,518  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:59,629  INFO MainThread Live/Fake score -- real: 0.5950
-2022-05-12 15:05:59,630  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:59,738  INFO MainThread Live/Fake score -- real: 0.5357
-2022-05-12 15:05:59,739  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:59,846  INFO MainThread Live/Fake score -- fake: 0.6749
-2022-05-12 15:05:59,847  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:05:59,955  INFO MainThread Live/Fake score -- real: 0.5510
-2022-05-12 15:05:59,956  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:00,069  INFO MainThread Live/Fake score -- fake: 0.5107
-2022-05-12 15:06:00,070  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:00,178  INFO MainThread Live/Fake score -- fake: 0.5034
-2022-05-12 15:06:00,178  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:00,289  INFO MainThread Live/Fake score -- real: 0.6374
-2022-05-12 15:06:00,289  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:00,398  INFO MainThread Live/Fake score -- real: 0.6055
-2022-05-12 15:06:00,399  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:00,506  INFO MainThread Live/Fake score -- fake: 0.7768
-2022-05-12 15:06:00,507  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:00,614  INFO MainThread Live/Fake score -- fake: 0.8778
-2022-05-12 15:06:00,614  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:00,722  INFO MainThread Live/Fake score -- fake: 0.9985
-2022-05-12 15:06:00,722  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:00,829  INFO MainThread Live/Fake score -- fake: 0.9907
-2022-05-12 15:06:00,829  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:00,938  INFO MainThread Live/Fake score -- fake: 0.5279
-2022-05-12 15:06:00,938  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:01,051  INFO MainThread Live/Fake score -- fake: 0.7064
-2022-05-12 15:06:01,052  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:01,162  INFO MainThread Live/Fake score -- fake: 0.7860
-2022-05-12 15:06:01,162  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:01,270  INFO MainThread Live/Fake score -- fake: 0.8191
-2022-05-12 15:06:01,271  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:01,379  INFO MainThread Live/Fake score -- fake: 0.8095
-2022-05-12 15:06:01,380  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:01,486  INFO MainThread Live/Fake score -- fake: 0.8278
-2022-05-12 15:06:01,487  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:01,597  INFO MainThread Live/Fake score -- fake: 0.7972
-2022-05-12 15:06:01,597  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:01,705  INFO MainThread Live/Fake score -- fake: 0.7990
-2022-05-12 15:06:01,705  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:01,813  INFO MainThread Live/Fake score -- fake: 0.9822
-2022-05-12 15:06:01,814  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:01,921  INFO MainThread Live/Fake score -- fake: 0.7922
-2022-05-12 15:06:01,922  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:02,031  INFO MainThread Live/Fake score -- fake: 0.9922
-2022-05-12 15:06:02,032  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:02,144  INFO MainThread Live/Fake score -- fake: 0.6912
-2022-05-12 15:06:02,145  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:02,253  INFO MainThread Live/Fake score -- fake: 0.9893
-2022-05-12 15:06:02,253  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:02,362  INFO MainThread Live/Fake score -- fake: 0.9761
-2022-05-12 15:06:02,362  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:02,471  INFO MainThread Live/Fake score -- fake: 0.9658
-2022-05-12 15:06:02,472  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:02,560  INFO MainThread Live/Fake score -- fake: 0.6047
-2022-05-12 15:06:02,561  INFO MainThread Face detected -- []
-2022-05-12 15:06:02,574  INFO MainThread nobody
-2022-05-12 15:06:02,651  INFO MainThread Live/Fake score -- fake: 0.7024
-2022-05-12 15:06:02,652  INFO MainThread Face detected -- []
-2022-05-12 15:06:02,665  INFO MainThread nobody
-2022-05-12 15:06:02,743  INFO MainThread Live/Fake score -- fake: 0.6064
-2022-05-12 15:06:02,743  INFO MainThread Face detected -- []
-2022-05-12 15:06:02,756  INFO MainThread nobody
-2022-05-12 15:06:02,852  INFO MainThread Live/Fake score -- fake: 0.8900
-2022-05-12 15:06:02,852  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:02,960  INFO MainThread Live/Fake score -- fake: 0.5917
-2022-05-12 15:06:02,961  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:03,051  INFO MainThread Live/Fake score -- fake: 0.5004
-2022-05-12 15:06:03,051  INFO MainThread Face detected -- []
-2022-05-12 15:06:03,064  INFO MainThread nobody
-2022-05-12 15:06:03,143  INFO MainThread Live/Fake score -- real: 0.5897
-2022-05-12 15:06:03,143  INFO MainThread Face detected -- []
-2022-05-12 15:06:03,157  INFO MainThread nobody
-2022-05-12 15:06:03,234  INFO MainThread Live/Fake score -- real: 0.6430
-2022-05-12 15:06:03,235  INFO MainThread Face detected -- []
-2022-05-12 15:06:03,248  INFO MainThread nobody
-2022-05-12 15:06:03,326  INFO MainThread Live/Fake score -- real: 0.7095
-2022-05-12 15:06:03,326  INFO MainThread Face detected -- []
-2022-05-12 15:06:03,339  INFO MainThread nobody
-2022-05-12 15:06:03,416  INFO MainThread Live/Fake score -- real: 0.6858
-2022-05-12 15:06:03,416  INFO MainThread Face detected -- []
-2022-05-12 15:06:03,429  INFO MainThread nobody
-2022-05-12 15:06:03,506  INFO MainThread Live/Fake score -- real: 0.6493
-2022-05-12 15:06:03,506  INFO MainThread Face detected -- []
-2022-05-12 15:06:03,519  INFO MainThread nobody
-2022-05-12 15:06:03,595  INFO MainThread Live/Fake score -- real: 0.6328
-2022-05-12 15:06:03,596  INFO MainThread Face detected -- []
-2022-05-12 15:06:03,608  INFO MainThread nobody
-2022-05-12 15:06:03,684  INFO MainThread Live/Fake score -- real: 0.6824
-2022-05-12 15:06:03,685  INFO MainThread Face detected -- []
-2022-05-12 15:06:03,698  INFO MainThread nobody
-2022-05-12 15:06:03,794  INFO MainThread Live/Fake score -- fake: 0.6668
-2022-05-12 15:06:03,795  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:03,903  INFO MainThread Live/Fake score -- fake: 0.8419
-2022-05-12 15:06:03,904  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:04,017  INFO MainThread Live/Fake score -- fake: 0.5033
-2022-05-12 15:06:04,017  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:04,126  INFO MainThread Live/Fake score -- real: 0.5547
-2022-05-12 15:06:04,127  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:04,235  INFO MainThread Live/Fake score -- real: 0.7081
-2022-05-12 15:06:04,236  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:04,347  INFO MainThread Live/Fake score -- fake: 0.9783
-2022-05-12 15:06:04,347  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:04,456  INFO MainThread Live/Fake score -- fake: 0.9710
-2022-05-12 15:06:04,457  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:04,566  INFO MainThread Live/Fake score -- real: 0.6299
-2022-05-12 15:06:04,566  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:04,675  INFO MainThread Live/Fake score -- fake: 0.9292
-2022-05-12 15:06:04,675  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:04,782  INFO MainThread Live/Fake score -- real: 0.9555
-2022-05-12 15:06:04,782  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:04,891  INFO MainThread Live/Fake score -- real: 0.8180
-2022-05-12 15:06:04,892  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:05,001  INFO MainThread Live/Fake score -- real: 0.8797
-2022-05-12 15:06:05,001  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:05,114  INFO MainThread Live/Fake score -- fake: 0.5119
-2022-05-12 15:06:05,115  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:05,223  INFO MainThread Live/Fake score -- fake: 0.6885
-2022-05-12 15:06:05,224  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:05,335  INFO MainThread Live/Fake score -- fake: 0.9950
-2022-05-12 15:06:05,335  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:05,443  INFO MainThread Live/Fake score -- fake: 0.9748
-2022-05-12 15:06:05,443  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:05,550  INFO MainThread Live/Fake score -- fake: 0.6606
-2022-05-12 15:06:05,550  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:05,660  INFO MainThread Live/Fake score -- real: 0.8652
-2022-05-12 15:06:05,661  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:05,768  INFO MainThread Live/Fake score -- fake: 0.8754
-2022-05-12 15:06:05,769  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:05,875  INFO MainThread Live/Fake score -- fake: 0.9069
-2022-05-12 15:06:05,876  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:05,984  INFO MainThread Live/Fake score -- fake: 0.9038
-2022-05-12 15:06:05,985  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:06,100  INFO MainThread Live/Fake score -- fake: 0.9927
-2022-05-12 15:06:06,101  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:06,207  INFO MainThread Live/Fake score -- fake: 0.9869
-2022-05-12 15:06:06,208  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:06,317  INFO MainThread Live/Fake score -- fake: 0.9945
-2022-05-12 15:06:06,317  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:06,429  INFO MainThread Live/Fake score -- fake: 0.9971
-2022-05-12 15:06:06,429  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:06,536  INFO MainThread Live/Fake score -- fake: 0.9872
-2022-05-12 15:06:06,536  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:06,647  INFO MainThread Live/Fake score -- fake: 0.9941
-2022-05-12 15:06:06,648  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:06,754  INFO MainThread Live/Fake score -- fake: 0.9531
-2022-05-12 15:06:06,755  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:06,865  INFO MainThread Live/Fake score -- fake: 0.9241
-2022-05-12 15:06:06,865  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:06,972  INFO MainThread Live/Fake score -- fake: 0.9844
-2022-05-12 15:06:06,972  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:07,080  INFO MainThread Live/Fake score -- fake: 0.9212
-2022-05-12 15:06:07,081  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:07,198  INFO MainThread Live/Fake score -- real: 0.8513
-2022-05-12 15:06:07,198  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:07,289  INFO MainThread Live/Fake score -- real: 0.5831
-2022-05-12 15:06:07,304  INFO MainThread Face detected -- []
-2022-05-12 15:06:07,319  INFO MainThread nobody
-2022-05-12 15:06:07,400  INFO MainThread Live/Fake score -- fake: 0.5687
-2022-05-12 15:06:07,401  INFO MainThread Face detected -- []
-2022-05-12 15:06:07,414  INFO MainThread nobody
-2022-05-12 15:06:07,489  INFO MainThread Live/Fake score -- fake: 0.5609
-2022-05-12 15:06:07,490  INFO MainThread Face detected -- []
-2022-05-12 15:06:07,503  INFO MainThread nobody
-2022-05-12 15:06:07,584  INFO MainThread Live/Fake score -- real: 0.5965
-2022-05-12 15:06:07,584  INFO MainThread Face detected -- []
-2022-05-12 15:06:07,597  INFO MainThread nobody
-2022-05-12 15:06:07,694  INFO MainThread Live/Fake score -- fake: 0.9340
-2022-05-12 15:06:07,694  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:07,804  INFO MainThread Live/Fake score -- fake: 0.9891
-2022-05-12 15:06:07,804  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:07,935  INFO MainThread Live/Fake score -- real: 0.6529
-2022-05-12 15:06:07,943  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:08,050  INFO MainThread Live/Fake score -- fake: 0.9433
-2022-05-12 15:06:08,050  INFO MainThread Face detected -- ['Unknown']
-2022-05-12 15:06:08,164  INFO MainThread Live/Fake score -- real: 0.7811
-2022-05-12 15:06:08,165  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:08,270  INFO MainThread Live/Fake score -- real: 0.6398
-2022-05-12 15:06:08,270  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:08,383  INFO MainThread Live/Fake score -- real: 0.6764
-2022-05-12 15:06:08,396  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:08,509  INFO MainThread Live/Fake score -- real: 0.6821
-2022-05-12 15:06:08,510  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:08,619  INFO MainThread Live/Fake score -- real: 0.7406
-2022-05-12 15:06:08,619  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:08,729  INFO MainThread Live/Fake score -- real: 0.7716
-2022-05-12 15:06:08,729  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:08,836  INFO MainThread Live/Fake score -- real: 0.6665
-2022-05-12 15:06:08,836  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:08,944  INFO MainThread Live/Fake score -- real: 0.6106
-2022-05-12 15:06:08,944  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:09,054  INFO MainThread Live/Fake score -- real: 0.6205
-2022-05-12 15:06:09,055  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:09,167  INFO MainThread Live/Fake score -- real: 0.6331
-2022-05-12 15:06:09,168  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:09,280  INFO MainThread Live/Fake score -- real: 0.6349
-2022-05-12 15:06:09,281  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:09,388  INFO MainThread Live/Fake score -- real: 0.7236
-2022-05-12 15:06:09,389  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:09,497  INFO MainThread Live/Fake score -- real: 0.6947
-2022-05-12 15:06:09,498  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:09,605  INFO MainThread Live/Fake score -- real: 0.6949
-2022-05-12 15:06:09,606  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:09,717  INFO MainThread Live/Fake score -- real: 0.6731
-2022-05-12 15:06:09,717  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:09,825  INFO MainThread Live/Fake score -- real: 0.6345
-2022-05-12 15:06:09,826  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:09,939  INFO MainThread Live/Fake score -- real: 0.6483
-2022-05-12 15:06:09,940  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:10,059  INFO MainThread Live/Fake score -- fake: 0.5201
-2022-05-12 15:06:10,059  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:10,168  INFO MainThread Live/Fake score -- real: 0.6703
-2022-05-12 15:06:10,168  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:10,274  INFO MainThread Live/Fake score -- real: 0.7002
-2022-05-12 15:06:10,275  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:10,388  INFO MainThread Live/Fake score -- real: 0.6527
-2022-05-12 15:06:10,388  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:10,499  INFO MainThread Live/Fake score -- real: 0.6001
-2022-05-12 15:06:10,500  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:10,606  INFO MainThread Live/Fake score -- fake: 0.5139
-2022-05-12 15:06:10,607  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:10,716  INFO MainThread Live/Fake score -- real: 0.8534
-2022-05-12 15:06:10,716  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:10,827  INFO MainThread Live/Fake score -- real: 0.6295
-2022-05-12 15:06:10,827  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:10,937  INFO MainThread Live/Fake score -- real: 0.7210
-2022-05-12 15:06:10,937  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:11,046  INFO MainThread Live/Fake score -- real: 0.6677
-2022-05-12 15:06:11,047  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:11,155  INFO MainThread Live/Fake score -- real: 0.6977
-2022-05-12 15:06:11,156  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:11,264  INFO MainThread Live/Fake score -- real: 0.6233
-2022-05-12 15:06:11,264  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:11,377  INFO MainThread Live/Fake score -- real: 0.5830
-2022-05-12 15:06:11,378  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:11,487  INFO MainThread Live/Fake score -- real: 0.5392
-2022-05-12 15:06:11,488  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:11,597  INFO MainThread Live/Fake score -- fake: 0.5862
-2022-05-12 15:06:11,597  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:11,683  INFO MainThread Live/Fake score -- real: 0.7846
-2022-05-12 15:06:11,684  INFO MainThread Face detected -- []
-2022-05-12 15:06:11,697  INFO MainThread nobody
-2022-05-12 15:06:11,773  INFO MainThread Live/Fake score -- real: 0.7977
-2022-05-12 15:06:11,774  INFO MainThread Face detected -- []
-2022-05-12 15:06:11,787  INFO MainThread nobody
-2022-05-12 15:06:11,887  INFO MainThread Live/Fake score -- fake: 0.5824
-2022-05-12 15:06:11,887  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:11,998  INFO MainThread Live/Fake score -- real: 0.6639
-2022-05-12 15:06:11,999  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:12,109  INFO MainThread Live/Fake score -- fake: 0.5734
-2022-05-12 15:06:12,109  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:12,216  INFO MainThread Live/Fake score -- fake: 0.8063
-2022-05-12 15:06:12,216  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:12,323  INFO MainThread Live/Fake score -- fake: 0.9848
-2022-05-12 15:06:12,324  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:12,436  INFO MainThread Live/Fake score -- fake: 0.9898
-2022-05-12 15:06:12,437  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:12,545  INFO MainThread Live/Fake score -- fake: 0.9796
-2022-05-12 15:06:12,546  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:12,658  INFO MainThread Live/Fake score -- fake: 0.8737
-2022-05-12 15:06:12,658  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:12,766  INFO MainThread Live/Fake score -- fake: 0.9067
-2022-05-12 15:06:12,767  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:12,877  INFO MainThread Live/Fake score -- fake: 0.9443
-2022-05-12 15:06:12,877  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:12,984  INFO MainThread Live/Fake score -- fake: 0.6229
-2022-05-12 15:06:12,985  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:13,094  INFO MainThread Live/Fake score -- fake: 0.5757
-2022-05-12 15:06:13,095  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:13,201  INFO MainThread Live/Fake score -- fake: 0.7532
-2022-05-12 15:06:13,202  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:13,308  INFO MainThread Live/Fake score -- fake: 0.7766
-2022-05-12 15:06:13,309  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:13,420  INFO MainThread Live/Fake score -- real: 0.7994
-2022-05-12 15:06:13,420  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:13,533  INFO MainThread Live/Fake score -- real: 0.8685
-2022-05-12 15:06:13,533  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:13,642  INFO MainThread Live/Fake score -- real: 0.8995
-2022-05-12 15:06:13,642  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:13,751  INFO MainThread Live/Fake score -- real: 0.7842
-2022-05-12 15:06:13,752  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:13,862  INFO MainThread Live/Fake score -- real: 0.5465
-2022-05-12 15:06:13,862  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:13,970  INFO MainThread Live/Fake score -- real: 0.7521
-2022-05-12 15:06:13,971  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:14,080  INFO MainThread Live/Fake score -- real: 0.7995
-2022-05-12 15:06:14,080  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:14,190  INFO MainThread Live/Fake score -- fake: 0.7782
-2022-05-12 15:06:14,190  INFO MainThread Face detected -- ['Unknown']
-2022-05-12 15:06:14,299  INFO MainThread Live/Fake score -- real: 0.8255
-2022-05-12 15:06:14,300  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:14,407  INFO MainThread Live/Fake score -- real: 0.8804
-2022-05-12 15:06:14,407  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:14,521  INFO MainThread Live/Fake score -- real: 0.8758
-2022-05-12 15:06:14,522  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:14,630  INFO MainThread Live/Fake score -- real: 0.8838
-2022-05-12 15:06:14,631  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:14,718  INFO MainThread Live/Fake score -- real: 0.8240
-2022-05-12 15:06:14,719  INFO MainThread Face detected -- []
-2022-05-12 15:06:14,731  INFO MainThread nobody
-2022-05-12 15:06:14,809  INFO MainThread Live/Fake score -- real: 0.6850
-2022-05-12 15:06:14,809  INFO MainThread Face detected -- []
-2022-05-12 15:06:14,823  INFO MainThread nobody
-2022-05-12 15:06:14,900  INFO MainThread Live/Fake score -- real: 0.7651
-2022-05-12 15:06:14,901  INFO MainThread Face detected -- []
-2022-05-12 15:06:14,914  INFO MainThread nobody
-2022-05-12 15:06:14,989  INFO MainThread Live/Fake score -- real: 0.7885
-2022-05-12 15:06:14,990  INFO MainThread Face detected -- []
-2022-05-12 15:06:15,003  INFO MainThread nobody
-2022-05-12 15:06:15,081  INFO MainThread Live/Fake score -- real: 0.7681
-2022-05-12 15:06:15,082  INFO MainThread Face detected -- []
-2022-05-12 15:06:15,094  INFO MainThread nobody
-2022-05-12 15:06:15,170  INFO MainThread Live/Fake score -- real: 0.7536
-2022-05-12 15:06:15,170  INFO MainThread Face detected -- []
-2022-05-12 15:06:15,184  INFO MainThread nobody
-2022-05-12 15:06:15,285  INFO MainThread Live/Fake score -- real: 0.8439
-2022-05-12 15:06:15,285  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:15,374  INFO MainThread Live/Fake score -- real: 0.7023
-2022-05-12 15:06:15,374  INFO MainThread Face detected -- []
-2022-05-12 15:06:15,387  INFO MainThread nobody
-2022-05-12 15:06:15,468  INFO MainThread Live/Fake score -- real: 0.8039
-2022-05-12 15:06:15,468  INFO MainThread Face detected -- []
-2022-05-12 15:06:15,481  INFO MainThread nobody
-2022-05-12 15:06:15,559  INFO MainThread Live/Fake score -- real: 0.8038
-2022-05-12 15:06:15,559  INFO MainThread Face detected -- []
-2022-05-12 15:06:15,572  INFO MainThread nobody
-2022-05-12 15:06:15,651  INFO MainThread Live/Fake score -- real: 0.8109
-2022-05-12 15:06:15,651  INFO MainThread Face detected -- []
-2022-05-12 15:06:15,663  INFO MainThread nobody
-2022-05-12 15:06:15,744  INFO MainThread Live/Fake score -- real: 0.7945
-2022-05-12 15:06:15,745  INFO MainThread Face detected -- []
-2022-05-12 15:06:15,757  INFO MainThread nobody
-2022-05-12 15:06:15,834  INFO MainThread Live/Fake score -- real: 0.8258
-2022-05-12 15:06:15,834  INFO MainThread Face detected -- []
-2022-05-12 15:06:15,847  INFO MainThread nobody
-2022-05-12 15:06:15,923  INFO MainThread Live/Fake score -- real: 0.7645
-2022-05-12 15:06:15,923  INFO MainThread Face detected -- []
-2022-05-12 15:06:15,936  INFO MainThread nobody
-2022-05-12 15:06:16,013  INFO MainThread Live/Fake score -- real: 0.7390
-2022-05-12 15:06:16,014  INFO MainThread Face detected -- []
-2022-05-12 15:06:16,026  INFO MainThread nobody
-2022-05-12 15:06:16,123  INFO MainThread Live/Fake score -- real: 0.8180
-2022-05-12 15:06:16,123  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:16,211  INFO MainThread Live/Fake score -- real: 0.7930
-2022-05-12 15:06:16,211  INFO MainThread Face detected -- []
-2022-05-12 15:06:16,225  INFO MainThread nobody
-2022-05-12 15:06:16,305  INFO MainThread Live/Fake score -- real: 0.7983
-2022-05-12 15:06:16,306  INFO MainThread Face detected -- []
-2022-05-12 15:06:16,319  INFO MainThread nobody
-2022-05-12 15:06:16,519  INFO MainThread Live/Fake score -- real: 0.8370
-2022-05-12 15:06:16,520  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:16,611  INFO MainThread Live/Fake score -- real: 0.7313
-2022-05-12 15:06:16,612  INFO MainThread Face detected -- []
-2022-05-12 15:06:16,625  INFO MainThread nobody
-2022-05-12 15:06:16,701  INFO MainThread Live/Fake score -- real: 0.6995
-2022-05-12 15:06:16,701  INFO MainThread Face detected -- []
-2022-05-12 15:06:16,714  INFO MainThread nobody
-2022-05-12 15:06:16,810  INFO MainThread Live/Fake score -- real: 0.8844
-2022-05-12 15:06:16,811  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:16,899  INFO MainThread Live/Fake score -- real: 0.8218
-2022-05-12 15:06:16,900  INFO MainThread Face detected -- []
-2022-05-12 15:06:16,912  INFO MainThread nobody
-2022-05-12 15:06:16,987  INFO MainThread Live/Fake score -- real: 0.8240
-2022-05-12 15:06:16,987  INFO MainThread Face detected -- []
-2022-05-12 15:06:17,001  INFO MainThread nobody
-2022-05-12 15:06:17,075  INFO MainThread Live/Fake score -- real: 0.8080
-2022-05-12 15:06:17,076  INFO MainThread Face detected -- []
-2022-05-12 15:06:17,088  INFO MainThread nobody
-2022-05-12 15:06:17,167  INFO MainThread Live/Fake score -- real: 0.8282
-2022-05-12 15:06:17,167  INFO MainThread Face detected -- []
-2022-05-12 15:06:17,181  INFO MainThread nobody
-2022-05-12 15:06:17,276  INFO MainThread Live/Fake score -- real: 0.8625
-2022-05-12 15:06:17,277  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:17,388  INFO MainThread Live/Fake score -- real: 0.9291
-2022-05-12 15:06:17,389  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:17,475  INFO MainThread Live/Fake score -- real: 0.8882
-2022-05-12 15:06:17,476  INFO MainThread Face detected -- []
-2022-05-12 15:06:17,488  INFO MainThread nobody
-2022-05-12 15:06:17,565  INFO MainThread Live/Fake score -- real: 0.8908
-2022-05-12 15:06:17,566  INFO MainThread Face detected -- []
-2022-05-12 15:06:17,579  INFO MainThread nobody
-2022-05-12 15:06:17,678  INFO MainThread Live/Fake score -- real: 0.9162
-2022-05-12 15:06:17,679  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:17,766  INFO MainThread Live/Fake score -- real: 0.8388
-2022-05-12 15:06:17,766  INFO MainThread Face detected -- []
-2022-05-12 15:06:17,779  INFO MainThread nobody
-2022-05-12 15:06:17,854  INFO MainThread Live/Fake score -- real: 0.7890
-2022-05-12 15:06:17,854  INFO MainThread Face detected -- []
-2022-05-12 15:06:17,868  INFO MainThread nobody
-2022-05-12 15:06:17,945  INFO MainThread Live/Fake score -- real: 0.8426
-2022-05-12 15:06:17,946  INFO MainThread Face detected -- []
-2022-05-12 15:06:17,958  INFO MainThread nobody
-2022-05-12 15:06:18,055  INFO MainThread Live/Fake score -- real: 0.8698
-2022-05-12 15:06:18,055  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:18,144  INFO MainThread Live/Fake score -- real: 0.8550
-2022-05-12 15:06:18,145  INFO MainThread Face detected -- []
-2022-05-12 15:06:18,158  INFO MainThread nobody
-2022-05-12 15:06:18,255  INFO MainThread Live/Fake score -- real: 0.8928
-2022-05-12 15:06:18,256  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:18,349  INFO MainThread Live/Fake score -- real: 0.8841
-2022-05-12 15:06:18,349  INFO MainThread Face detected -- []
-2022-05-12 15:06:18,362  INFO MainThread nobody
-2022-05-12 15:06:18,437  INFO MainThread Live/Fake score -- real: 0.9220
-2022-05-12 15:06:18,438  INFO MainThread Face detected -- []
-2022-05-12 15:06:18,451  INFO MainThread nobody
-2022-05-12 15:06:18,547  INFO MainThread Live/Fake score -- real: 0.8224
-2022-05-12 15:06:18,548  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:18,635  INFO MainThread Live/Fake score -- real: 0.9033
-2022-05-12 15:06:18,636  INFO MainThread Face detected -- []
-2022-05-12 15:06:18,650  INFO MainThread nobody
-2022-05-12 15:06:18,747  INFO MainThread Live/Fake score -- real: 0.8410
-2022-05-12 15:06:18,748  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:18,835  INFO MainThread Live/Fake score -- real: 0.9397
-2022-05-12 15:06:18,836  INFO MainThread Face detected -- []
-2022-05-12 15:06:18,848  INFO MainThread nobody
-2022-05-12 15:06:18,923  INFO MainThread Live/Fake score -- real: 0.9129
-2022-05-12 15:06:18,923  INFO MainThread Face detected -- []
-2022-05-12 15:06:18,937  INFO MainThread nobody
-2022-05-12 15:06:19,038  INFO MainThread Live/Fake score -- real: 0.8400
-2022-05-12 15:06:19,038  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:19,149  INFO MainThread Live/Fake score -- real: 0.8075
-2022-05-12 15:06:19,150  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:19,240  INFO MainThread Live/Fake score -- real: 0.8290
-2022-05-12 15:06:19,241  INFO MainThread Face detected -- []
-2022-05-12 15:06:19,253  INFO MainThread nobody
-2022-05-12 15:06:19,331  INFO MainThread Live/Fake score -- real: 0.8529
-2022-05-12 15:06:19,331  INFO MainThread Face detected -- []
-2022-05-12 15:06:19,345  INFO MainThread nobody
-2022-05-12 15:06:19,421  INFO MainThread Live/Fake score -- real: 0.7384
-2022-05-12 15:06:19,422  INFO MainThread Face detected -- []
-2022-05-12 15:06:19,434  INFO MainThread nobody
-2022-05-12 15:06:19,510  INFO MainThread Live/Fake score -- real: 0.8433
-2022-05-12 15:06:19,511  INFO MainThread Face detected -- []
-2022-05-12 15:06:19,524  INFO MainThread nobody
-2022-05-12 15:06:19,600  INFO MainThread Live/Fake score -- real: 0.7731
-2022-05-12 15:06:19,600  INFO MainThread Face detected -- []
-2022-05-12 15:06:19,614  INFO MainThread nobody
-2022-05-12 15:06:19,690  INFO MainThread Live/Fake score -- real: 0.8288
-2022-05-12 15:06:19,690  INFO MainThread Face detected -- []
-2022-05-12 15:06:19,703  INFO MainThread nobody
-2022-05-12 15:06:19,786  INFO MainThread Live/Fake score -- real: 0.8277
-2022-05-12 15:06:19,787  INFO MainThread Face detected -- []
-2022-05-12 15:06:19,799  INFO MainThread nobody
-2022-05-12 15:06:19,875  INFO MainThread Live/Fake score -- real: 0.8381
-2022-05-12 15:06:19,876  INFO MainThread Face detected -- []
-2022-05-12 15:06:19,888  INFO MainThread nobody
-2022-05-12 15:06:19,965  INFO MainThread Live/Fake score -- real: 0.8766
-2022-05-12 15:06:19,965  INFO MainThread Face detected -- []
-2022-05-12 15:06:19,978  INFO MainThread nobody
-2022-05-12 15:06:20,053  INFO MainThread Live/Fake score -- real: 0.8572
-2022-05-12 15:06:20,053  INFO MainThread Face detected -- []
-2022-05-12 15:06:20,066  INFO MainThread nobody
-2022-05-12 15:06:20,167  INFO MainThread Live/Fake score -- real: 0.7027
-2022-05-12 15:06:20,167  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:20,278  INFO MainThread Live/Fake score -- fake: 0.9004
-2022-05-12 15:06:20,279  INFO MainThread Face detected -- ['Unknown']
-2022-05-12 15:06:20,388  INFO MainThread Live/Fake score -- real: 0.6635
-2022-05-12 15:06:20,389  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:20,475  INFO MainThread Live/Fake score -- real: 0.8320
-2022-05-12 15:06:20,475  INFO MainThread Face detected -- []
-2022-05-12 15:06:20,487  INFO MainThread nobody
-2022-05-12 15:06:20,564  INFO MainThread Live/Fake score -- real: 0.8203
-2022-05-12 15:06:20,564  INFO MainThread Face detected -- []
-2022-05-12 15:06:20,577  INFO MainThread nobody
-2022-05-12 15:06:20,674  INFO MainThread Live/Fake score -- real: 0.5472
-2022-05-12 15:06:20,675  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:20,783  INFO MainThread Live/Fake score -- real: 0.6821
-2022-05-12 15:06:20,783  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:20,891  INFO MainThread Live/Fake score -- fake: 0.9638
-2022-05-12 15:06:20,891  INFO MainThread Face detected -- ['Unknown']
-2022-05-12 15:06:21,000  INFO MainThread Live/Fake score -- real: 0.5889
-2022-05-12 15:06:21,001  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:21,116  INFO MainThread Live/Fake score -- fake: 0.9425
-2022-05-12 15:06:21,117  INFO MainThread Face detected -- ['Unknown']
-2022-05-12 15:06:21,226  INFO MainThread Live/Fake score -- real: 0.8934
-2022-05-12 15:06:21,227  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:21,312  INFO MainThread Live/Fake score -- real: 0.8584
-2022-05-12 15:06:21,312  INFO MainThread Face detected -- []
-2022-05-12 15:06:21,325  INFO MainThread nobody
-2022-05-12 15:06:21,401  INFO MainThread Live/Fake score -- real: 0.8001
-2022-05-12 15:06:21,401  INFO MainThread Face detected -- []
-2022-05-12 15:06:21,415  INFO MainThread nobody
-2022-05-12 15:06:21,495  INFO MainThread Live/Fake score -- real: 0.7364
-2022-05-12 15:06:21,496  INFO MainThread Face detected -- []
-2022-05-12 15:06:21,508  INFO MainThread nobody
-2022-05-12 15:06:21,584  INFO MainThread Live/Fake score -- real: 0.8178
-2022-05-12 15:06:21,585  INFO MainThread Face detected -- []
-2022-05-12 15:06:21,597  INFO MainThread nobody
-2022-05-12 15:06:21,696  INFO MainThread Live/Fake score -- real: 0.8395
-2022-05-12 15:06:21,697  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:21,806  INFO MainThread Live/Fake score -- real: 0.8967
-2022-05-12 15:06:21,806  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:21,915  INFO MainThread Live/Fake score -- real: 0.8855
-2022-05-12 15:06:21,916  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:22,024  INFO MainThread Live/Fake score -- real: 0.8707
-2022-05-12 15:06:22,025  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:22,138  INFO MainThread Live/Fake score -- real: 0.8954
-2022-05-12 15:06:22,138  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:22,247  INFO MainThread Live/Fake score -- real: 0.8195
-2022-05-12 15:06:22,247  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:22,356  INFO MainThread Live/Fake score -- real: 0.8484
-2022-05-12 15:06:22,356  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:22,443  INFO MainThread Live/Fake score -- real: 0.8608
-2022-05-12 15:06:22,444  INFO MainThread Face detected -- []
-2022-05-12 15:06:22,456  INFO MainThread nobody
-2022-05-12 15:06:22,531  INFO MainThread Live/Fake score -- real: 0.7038
-2022-05-12 15:06:22,532  INFO MainThread Face detected -- []
-2022-05-12 15:06:22,545  INFO MainThread nobody
-2022-05-12 15:06:22,643  INFO MainThread Live/Fake score -- real: 0.6057
-2022-05-12 15:06:22,644  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:22,752  INFO MainThread Live/Fake score -- fake: 0.7995
-2022-05-12 15:06:22,752  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:22,862  INFO MainThread Live/Fake score -- real: 0.6646
-2022-05-12 15:06:22,863  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:22,971  INFO MainThread Live/Fake score -- real: 0.6061
-2022-05-12 15:06:22,972  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:23,085  INFO MainThread Live/Fake score -- real: 0.5050
-2022-05-12 15:06:23,085  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:23,198  INFO MainThread Live/Fake score -- real: 0.5102
-2022-05-12 15:06:23,198  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:23,308  INFO MainThread Live/Fake score -- real: 0.7720
-2022-05-12 15:06:23,308  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:23,417  INFO MainThread Live/Fake score -- real: 0.5899
-2022-05-12 15:06:23,418  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:23,526  INFO MainThread Live/Fake score -- fake: 0.9997
-2022-05-12 15:06:23,527  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:23,634  INFO MainThread Live/Fake score -- real: 0.5221
-2022-05-12 15:06:23,635  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:23,744  INFO MainThread Live/Fake score -- real: 0.5734
-2022-05-12 15:06:23,745  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:23,852  INFO MainThread Live/Fake score -- fake: 0.9989
-2022-05-12 15:06:23,852  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:23,964  INFO MainThread Live/Fake score -- fake: 0.9962
-2022-05-12 15:06:23,965  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:24,072  INFO MainThread Live/Fake score -- fake: 0.9944
-2022-05-12 15:06:24,072  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:24,185  INFO MainThread Live/Fake score -- real: 0.5213
-2022-05-12 15:06:24,185  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:24,295  INFO MainThread Live/Fake score -- real: 0.5111
-2022-05-12 15:06:24,295  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:24,403  INFO MainThread Live/Fake score -- fake: 0.6466
-2022-05-12 15:06:24,403  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:24,509  INFO MainThread Live/Fake score -- fake: 0.9891
-2022-05-12 15:06:24,510  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:24,618  INFO MainThread Live/Fake score -- fake: 0.8384
-2022-05-12 15:06:24,618  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:24,728  INFO MainThread Live/Fake score -- fake: 0.9938
-2022-05-12 15:06:24,729  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:24,835  INFO MainThread Live/Fake score -- real: 0.8612
-2022-05-12 15:06:24,835  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:24,943  INFO MainThread Live/Fake score -- real: 0.6151
-2022-05-12 15:06:24,943  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:25,050  INFO MainThread Live/Fake score -- real: 0.6701
-2022-05-12 15:06:25,050  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:25,159  INFO MainThread Live/Fake score -- fake: 0.9875
-2022-05-12 15:06:25,159  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:25,271  INFO MainThread Live/Fake score -- fake: 0.9934
-2022-05-12 15:06:25,271  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:25,380  INFO MainThread Live/Fake score -- real: 0.6387
-2022-05-12 15:06:25,381  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:25,489  INFO MainThread Live/Fake score -- fake: 0.6107
-2022-05-12 15:06:25,489  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:25,595  INFO MainThread Live/Fake score -- real: 0.6970
-2022-05-12 15:06:25,596  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:25,703  INFO MainThread Live/Fake score -- real: 0.6505
-2022-05-12 15:06:25,704  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:25,814  INFO MainThread Live/Fake score -- real: 0.8897
-2022-05-12 15:06:25,814  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:25,922  INFO MainThread Live/Fake score -- fake: 0.5519
-2022-05-12 15:06:25,922  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:26,031  INFO MainThread Live/Fake score -- fake: 0.7010
-2022-05-12 15:06:26,032  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:26,143  INFO MainThread Live/Fake score -- real: 0.9751
-2022-05-12 15:06:26,143  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:26,255  INFO MainThread Live/Fake score -- fake: 0.9983
-2022-05-12 15:06:26,255  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:26,364  INFO MainThread Live/Fake score -- fake: 0.9458
-2022-05-12 15:06:26,364  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:26,473  INFO MainThread Live/Fake score -- fake: 0.9993
-2022-05-12 15:06:26,473  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:26,581  INFO MainThread Live/Fake score -- fake: 0.9672
-2022-05-12 15:06:26,582  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:26,690  INFO MainThread Live/Fake score -- real: 0.7140
-2022-05-12 15:06:26,691  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:26,799  INFO MainThread Live/Fake score -- fake: 0.9914
-2022-05-12 15:06:26,800  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:26,907  INFO MainThread Live/Fake score -- fake: 0.9986
-2022-05-12 15:06:26,908  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:27,015  INFO MainThread Live/Fake score -- fake: 0.9922
-2022-05-12 15:06:27,016  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:27,123  INFO MainThread Live/Fake score -- fake: 0.8041
-2022-05-12 15:06:27,123  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:27,230  INFO MainThread Live/Fake score -- fake: 0.8190
-2022-05-12 15:06:27,231  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:27,342  INFO MainThread Live/Fake score -- fake: 0.9845
-2022-05-12 15:06:27,343  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:27,451  INFO MainThread Live/Fake score -- fake: 0.9374
-2022-05-12 15:06:27,451  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:27,561  INFO MainThread Live/Fake score -- real: 0.7976
-2022-05-12 15:06:27,561  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:27,671  INFO MainThread Live/Fake score -- real: 0.7422
-2022-05-12 15:06:27,671  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:27,781  INFO MainThread Live/Fake score -- real: 0.7160
-2022-05-12 15:06:27,782  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:27,890  INFO MainThread Live/Fake score -- fake: 0.7897
-2022-05-12 15:06:27,891  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:28,000  INFO MainThread Live/Fake score -- fake: 0.9933
-2022-05-12 15:06:28,000  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:28,112  INFO MainThread Live/Fake score -- fake: 0.7127
-2022-05-12 15:06:28,113  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:28,220  INFO MainThread Live/Fake score -- real: 0.9259
-2022-05-12 15:06:28,220  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:28,328  INFO MainThread Live/Fake score -- fake: 0.9317
-2022-05-12 15:06:28,328  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:28,441  INFO MainThread Live/Fake score -- real: 0.9002
-2022-05-12 15:06:28,441  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:28,548  INFO MainThread Live/Fake score -- real: 0.9346
-2022-05-12 15:06:28,549  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:28,656  INFO MainThread Live/Fake score -- fake: 0.9982
-2022-05-12 15:06:28,657  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:28,764  INFO MainThread Live/Fake score -- fake: 0.9976
-2022-05-12 15:06:28,765  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:28,874  INFO MainThread Live/Fake score -- fake: 0.9980
-2022-05-12 15:06:28,874  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:28,982  INFO MainThread Live/Fake score -- fake: 0.6076
-2022-05-12 15:06:28,983  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:29,092  INFO MainThread Live/Fake score -- fake: 0.5895
-2022-05-12 15:06:29,092  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:29,199  INFO MainThread Live/Fake score -- fake: 0.7297
-2022-05-12 15:06:29,200  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:29,308  INFO MainThread Live/Fake score -- fake: 0.6405
-2022-05-12 15:06:29,309  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:29,420  INFO MainThread Live/Fake score -- fake: 0.5950
-2022-05-12 15:06:29,421  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:29,528  INFO MainThread Live/Fake score -- fake: 0.8870
-2022-05-12 15:06:29,528  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:29,636  INFO MainThread Live/Fake score -- real: 0.9248
-2022-05-12 15:06:29,636  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:29,746  INFO MainThread Live/Fake score -- real: 0.8885
-2022-05-12 15:06:29,746  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:29,855  INFO MainThread Live/Fake score -- real: 0.9360
-2022-05-12 15:06:29,855  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:29,963  INFO MainThread Live/Fake score -- real: 0.9566
-2022-05-12 15:06:29,964  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:30,070  INFO MainThread Live/Fake score -- real: 0.9141
-2022-05-12 15:06:30,070  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:30,180  INFO MainThread Live/Fake score -- real: 0.8620
-2022-05-12 15:06:30,181  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:30,289  INFO MainThread Live/Fake score -- real: 0.8646
-2022-05-12 15:06:30,289  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:30,398  INFO MainThread Live/Fake score -- real: 0.8212
-2022-05-12 15:06:30,399  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:30,511  INFO MainThread Live/Fake score -- real: 0.8459
-2022-05-12 15:06:30,512  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:30,619  INFO MainThread Live/Fake score -- real: 0.8079
-2022-05-12 15:06:30,620  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:30,732  INFO MainThread Live/Fake score -- real: 0.8844
-2022-05-12 15:06:30,733  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:30,840  INFO MainThread Live/Fake score -- real: 0.9631
-2022-05-12 15:06:30,840  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:30,948  INFO MainThread Live/Fake score -- real: 0.9575
-2022-05-12 15:06:30,948  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:31,055  INFO MainThread Live/Fake score -- real: 0.9598
-2022-05-12 15:06:31,056  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:31,163  INFO MainThread Live/Fake score -- real: 0.9662
-2022-05-12 15:06:31,163  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:31,275  INFO MainThread Live/Fake score -- real: 0.9494
-2022-05-12 15:06:31,276  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:31,384  INFO MainThread Live/Fake score -- real: 0.9661
-2022-05-12 15:06:31,385  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:31,498  INFO MainThread Live/Fake score -- real: 0.8622
-2022-05-12 15:06:31,498  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:31,604  INFO MainThread Live/Fake score -- real: 0.8441
-2022-05-12 15:06:31,604  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:31,713  INFO MainThread Live/Fake score -- real: 0.8830
-2022-05-12 15:06:31,714  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:31,823  INFO MainThread Live/Fake score -- real: 0.8913
-2022-05-12 15:06:31,823  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:31,932  INFO MainThread Live/Fake score -- real: 0.9484
-2022-05-12 15:06:31,933  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:32,039  INFO MainThread Live/Fake score -- real: 0.9566
-2022-05-12 15:06:32,039  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:32,148  INFO MainThread Live/Fake score -- real: 0.9572
-2022-05-12 15:06:32,149  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:32,256  INFO MainThread Live/Fake score -- real: 0.9300
-2022-05-12 15:06:32,257  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:32,364  INFO MainThread Live/Fake score -- real: 0.6769
-2022-05-12 15:06:32,364  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:32,471  INFO MainThread Live/Fake score -- real: 0.7558
-2022-05-12 15:06:32,471  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:32,585  INFO MainThread Live/Fake score -- real: 0.6327
-2022-05-12 15:06:32,586  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:32,692  INFO MainThread Live/Fake score -- real: 0.8394
-2022-05-12 15:06:32,692  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:32,799  INFO MainThread Live/Fake score -- real: 0.8487
-2022-05-12 15:06:32,800  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:32,908  INFO MainThread Live/Fake score -- real: 0.8622
-2022-05-12 15:06:32,909  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:33,017  INFO MainThread Live/Fake score -- real: 0.5361
-2022-05-12 15:06:33,018  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:33,127  INFO MainThread Live/Fake score -- real: 0.5382
-2022-05-12 15:06:33,128  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:33,235  INFO MainThread Live/Fake score -- real: 0.6099
-2022-05-12 15:06:33,235  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:33,345  INFO MainThread Live/Fake score -- real: 0.6248
-2022-05-12 15:06:33,345  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:33,454  INFO MainThread Live/Fake score -- real: 0.5043
-2022-05-12 15:06:33,454  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:33,562  INFO MainThread Live/Fake score -- real: 0.5233
-2022-05-12 15:06:33,563  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:33,677  INFO MainThread Live/Fake score -- real: 0.5163
-2022-05-12 15:06:33,677  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:33,786  INFO MainThread Live/Fake score -- real: 0.5936
-2022-05-12 15:06:33,786  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:33,895  INFO MainThread Live/Fake score -- real: 0.5394
-2022-05-12 15:06:33,895  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:34,004  INFO MainThread Live/Fake score -- fake: 0.5196
-2022-05-12 15:06:34,005  INFO MainThread Face detected -- ['szilvia']
-2022-05-12 15:06:34,117  INFO MainThread Live/Fake score -- real: 0.5447
-2022-05-12 15:06:34,118  INFO MainThread Face detected -- ['szilvia']
+2022-05-12 17:21:55,541  INFO WorkerThread Start
+2022-05-12 17:21:55,546 DEBUG MainThread STREAM b'IHDR' 16 13
+2022-05-12 17:21:55,547 DEBUG MainThread STREAM b'IDAT' 41 8192
+2022-05-12 17:21:56,279 DEBUG MainThread STREAM b'IHDR' 16 13
+2022-05-12 17:21:56,279 DEBUG MainThread STREAM b'IDAT' 41 8192
+2022-05-12 17:21:58,295 DEBUG MainThread STREAM b'IHDR' 16 13
+2022-05-12 17:21:58,295 DEBUG MainThread STREAM b'IDAT' 41 8192
+2022-05-12 17:21:59,007 DEBUG MainThread STREAM b'IHDR' 16 13
+2022-05-12 17:21:59,007 DEBUG MainThread STREAM b'IDAT' 41 8192
+2022-05-12 17:21:59,723 DEBUG MainThread STREAM b'IHDR' 16 13
+2022-05-12 17:21:59,723 DEBUG MainThread STREAM b'IDAT' 41 8192
+2022-05-12 17:22:00,431  INFO MainThread Loading face detector...
+2022-05-12 17:22:00,443  INFO MainThread Loading Model...
+2022-05-12 17:22:01,708 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:01,757 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:01,758  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:01,759 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:01,759 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:02,468 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:02,514 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:02,515  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:02,523 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:02,523 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:03,015 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:03,062 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:03,063  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:03,066 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:03,066 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:03,544 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:03,591 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:03,592  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:03,595 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:03,595 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:04,063 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:04,107 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:04,109  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:04,112 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:04,112 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:04,590 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:04,635 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:04,636  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:04,639 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:04,639 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:05,129 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:05,178 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:05,179  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:05,182 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:05,182 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:05,658 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:05,708 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:05,709  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:05,713 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:05,713 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:06,189 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:06,233 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:06,234  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:06,237 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:06,237 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:06,720 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:06,768 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:06,769  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:06,772 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:06,772 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:07,244 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:07,294 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:07,295  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:07,298 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:07,298 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:07,762 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:07,809 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:07,811  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:07,814 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:07,814 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:08,295 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:08,347 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:08,348  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:08,351 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:08,351 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:08,819 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:08,868 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:08,869  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:08,872 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:08,872 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:09,344 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:09,396 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:09,397  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:09,400 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:09,400 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:09,879 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:09,926 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:09,927  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:09,930 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:09,930 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:10,406 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:10,450 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:10,452  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:10,455 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:10,455 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:10,932 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:10,988 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:10,990  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:10,993 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:10,993 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:11,464 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:11,511 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:11,512  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:11,515 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:11,515 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:11,995 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:12,041 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:12,043  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:12,046 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:12,046 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:12,533 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:12,579 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:12,580  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:12,584 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:12,584 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:13,069 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:13,115 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:13,117  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:13,120 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:13,120 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:13,618 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:13,666 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:13,667  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:13,670 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:13,671 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:14,146 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:14,193 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:14,194  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:14,198 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:14,198 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:14,680 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:14,727 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:14,729  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:14,732 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:14,732 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:15,212 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:15,264 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:15,265  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:15,268 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:15,268 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:15,769 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:15,821 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:15,822  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:15,825 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:15,825 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:16,361 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:16,410 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:16,411  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:16,417 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:16,417 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:16,901 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:16,948 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:16,949  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:16,956 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:16,957 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:17,427 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:17,478 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:17,479  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:17,484 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:17,485 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:17,956 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:18,001 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:18,002  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:18,007 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:18,007 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:18,501 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:18,552 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:18,553  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:18,557 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:18,557 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:19,039 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:19,090 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:19,091  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:19,096 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:19,096 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:19,608 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:19,655 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:19,657  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:19,660 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:19,660 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:20,153 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:20,203 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:20,205  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:20,210 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:20,210 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:20,740 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:20,797 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:20,798  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:20,803 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:20,803 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:21,321 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:21,376 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:21,377  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:21,383 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:21,383 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:21,850 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:21,900 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:21,902  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:21,906 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:21,907 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:22,385 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:22,430 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:22,431  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:22,434 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:22,435 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:22,917 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:22,960 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:22,961  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:22,964 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:22,965 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:23,431 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:23,483 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:23,485  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:23,488 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:23,488 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:23,970 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:24,020 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:24,022  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:24,025 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:24,025 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:24,505 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:24,553 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:24,554  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:24,559 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:24,559 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:25,024 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:25,074 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:25,075  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:25,079 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:25,079 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:25,547 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:25,594 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:25,595  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:25,599 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:25,599 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:26,075 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:26,119 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:26,120  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:26,124 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:26,124 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:26,595 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:26,650 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:26,651  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:26,654 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:26,654 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:27,141 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:27,191 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:27,192  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:27,196 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:27,196 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:27,687 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:27,737 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:27,738  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:27,742 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:27,743 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:28,212 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:28,266 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:28,267  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:28,273 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:28,273 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:28,748 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:28,793 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:28,794  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:28,798 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:28,799 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:29,286 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:29,332 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:29,334  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:29,337 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:29,337 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:29,813 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:29,860 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:29,862  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:29,868 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:29,868 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:30,345 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:30,392 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:30,393  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:30,396 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:30,396 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:30,860 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:30,908 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:30,909  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:30,912 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:30,912 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:31,396 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:31,440 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:31,442  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:31,445 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:31,445 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:31,921 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:31,968 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:31,969  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:31,972 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:31,973 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:32,441 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:32,489 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:32,490  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:32,493 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:32,493 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:32,971 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:33,018 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:33,019  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:33,022 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:33,022 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:33,504 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:33,549 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:33,550  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:33,553 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:33,554 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:34,022 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:34,078 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:34,079  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:34,082 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:34,082 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:34,570 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:34,618 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:34,619  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:34,622 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:34,622 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:35,100 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:35,144 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:35,145  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:35,149 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:35,149 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:35,615 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:35,659 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:35,660  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:35,663 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:35,663 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:36,146 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:36,191 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:36,192  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:36,195 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:36,195 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:36,682 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:36,732 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:36,733  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:36,737 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:36,737 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:37,204 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:37,251 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:37,252  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:37,257 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:37,257 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:37,742 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:37,789 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:37,790  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:37,795 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:37,795 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:38,289 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:38,336 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:38,337  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:38,342 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:38,342 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:38,821 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:38,868 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:38,870  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:38,879 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:38,879 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:39,358 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:39,409 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:39,410  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:39,415 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:39,415 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:39,896 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:39,944 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:39,945  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:39,950 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:39,951 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:40,421 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:40,467 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:40,468  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:40,471 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:40,471 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:40,956 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:41,001 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:41,002  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:41,005 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:41,005 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:41,486 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:41,531 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:41,532  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:41,537 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:41,537 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:42,009 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:42,060 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:42,061  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:42,065 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:42,065 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:42,543 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:42,589 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:42,590  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:42,594 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:42,594 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:43,060 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:43,113 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:43,114  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:43,118 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:43,118 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:43,602 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:43,650 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:43,651  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:43,655 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:43,655 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:44,122 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:44,169 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:44,170  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:44,174 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:44,174 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:44,650 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:44,701 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:44,703  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:44,707 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:44,707 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:45,184 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:45,228 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:45,229  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:45,233 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:45,234 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:45,713 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:45,760 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:45,761  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:45,765 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:45,765 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:46,235 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:46,285 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:46,286  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:46,290 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:46,290 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:46,767 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:46,814 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:46,815  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:46,819 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:46,819 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:47,324 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:47,371 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:47,372  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:47,376 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:47,376 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:47,844 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:47,892 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:47,893  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:47,896 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:47,896 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:48,408 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:48,456 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:48,458  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:48,462 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:48,462 DEBUG MainThread COG: (101, 140)
+2022-05-12 17:22:48,965 DEBUG MainThread Real: 0.999679446220398 : 1
+2022-05-12 17:22:49,011 DEBUG MainThread Real: 0.9984261989593506 : 1
+2022-05-12 17:22:49,013  INFO MainThread Face detected -- ['Unknown', 'Unknown']
+2022-05-12 17:22:49,016 DEBUG MainThread COG: (105, 142)
+2022-05-12 17:22:49,016 DEBUG MainThread COG: (101, 140)

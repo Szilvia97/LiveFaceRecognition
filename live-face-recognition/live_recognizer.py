@@ -10,6 +10,11 @@ from camera_stream import CameraStream
 import logging.config
 from configparser import ConfigParser
 
+# TODO:
+# https://www.geeksforgeeks.org/difference-between-dataclass-vs-namedtuple-vs-object-in-python/
+from collections import namedtuple
+from live_detection_data import LiveDetectionData
+
 # ap = argparse.ArgumentParser()
 # ap.add_argument("-m", "--model", type=str, required=True,
 #                 help="path to trained model")
@@ -52,6 +57,8 @@ class LiveeeeRecognizer:
         self.net.setInput(blob)
         detections = self.net.forward()
 
+        detection_list = []
+
         # what does detection list contain??
         for i in range(0, detections.shape[2]):
             confidence = detections[0, 0, i, 2]
@@ -71,27 +78,33 @@ class LiveeeeRecognizer:
                 face = img_to_array(face)
                 face = np.expand_dims(face, axis=0)
 
-                preds = self.model.predict(face)[0]
-                j = np.argmax(preds)
-                label = self.label_encoder.classes_[j]
-
-                label = "{}: {:.4f}".format(label, preds[j])
+                predictions = self.model.predict(face)[0]
+                j = np.argmax(predictions)
+                # label = "{}: {:.4f}".format(self.label_encoder.classes_[j], predictions[j])
                 # print(label)
-                logging.info("Live/Fake score -- {}".format(label))
+                score = predictions[j]
+
+                # logging.info(f"Live/Fake score -- {score}")
 
                 # TODO only draw rectangle when enabled from config
                 # TODO remove hard coded values
-                if preds[j] > 0.60 and j == 1:
-                    cv2.rectangle(frame, (startX, startY), (endX, endY), (0, 255, 0), 2)
-                    _label = "Real: {:.4f}".format(preds[j])
-                    cv2.putText(frame, _label, (startX, startY - 10),
-                                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+                if score > 0.60 and j == 1:
+                    # if config.drawdetectiononframe:
+                    # cv2.rectangle(frame, (startX, startY), (endX, endY), (0, 255, 0), 2)
+                    # text_to_display = "Real: {:.4f}".format(score)
+                    # cv2.putText(frame, text_to_display, (startX, startY - 10),
+                    #             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+                    logging.debug(f"Real: {score} : {j}")
+
+                    detection_list.append(LiveDetectionData(score, 'real', startX, startY, endX, endY))
 
                 else:
-                    cv2.rectangle(frame, (startX, startY), (endX, endY), (0, 0, 255), 2)
-                    _label = "Fake/Spoofed: {:.4f}".format(preds[j])
-                    cv2.putText(frame, _label, (startX, startY - 10),
-                                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+                    # cv2.rectangle(frame, (startX, startY), (endX, endY), (0, 0, 255), 2)
+                    # text_to_display = "Fake/Spoofed: {:.4f}".format(score)
+                    # cv2.putText(frame, text_to_display, (startX, startY - 10),
+                    #             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+                    logging.debug(f"Fake: {score} : {j}")
+                    detection_list.append(LiveDetectionData(score, 'fake', startX, startY, endX, endY))
 
                 # cv2.putText(frame, label, (startX, startY - 10),
                 #        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
@@ -99,7 +112,7 @@ class LiveeeeRecognizer:
                 #        (0, 0, 255), 2)
 
         # TODO should return detection+confidence, or only confident detections
-        return detections, frame
+        return detection_list, frame
 
 
 def main():
@@ -117,7 +130,10 @@ def main():
     while True:
         frame = camera_streamer.get_latest_frame()
 
-        _, frame = live_rec.process_frame(frame)
+        detection_list, frame = live_rec.process_frame(frame)
+        for detection in detection_list:
+            score, text, startX, startY, endX, endY = detection
+            cv2.rectangle(frame, (startX, startY), (endX, endY), (0, 0, 255), 2)
 
         cv2.imshow('Video', frame)
 
