@@ -8,6 +8,8 @@ from camera_stream import CameraStream
 import logging.config
 from configparser import ConfigParser
 
+from face_detection_data import FaceDetectionData
+
 
 class FaceRecognizer:
     def __init__(self, config):
@@ -41,6 +43,7 @@ class FaceRecognizer:
         face_encodings = face_recognition.face_encodings(rgb_small_frame, face_locations)
 
         face_names = []
+        face_list = []
         for face_encoding in face_encodings:
             matches = face_recognition.compare_faces(self.known_face_encodings, face_encoding, tolerance=0.6)
             name = "Unknown"
@@ -51,17 +54,20 @@ class FaceRecognizer:
             face_names.append(name)
 
         # TODO only draw rectangle when enabled from config
-        # for (top, right, bottom, left), name in zip(face_locations, face_names):
-        #     top *= 4
-        #     right *= 4
-        #     bottom *= 4
-        #     left *= 4
-        #     cv2.rectangle(frame, (left, top), (right, bottom), (255,0,255), 2)
-        #     cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (255,0,255), cv2.FILLED)
-        #     font = cv2.FONT_HERSHEY_DUPLEX
-        #     cv2.putText(frame, name, (left + 6, bottom - 6), font, 0.6, (0,0,0), 1)
+        for (top, right, bottom, left), name in zip(face_locations, face_names):
+            top *= 4
+            right *= 4
+            bottom *= 4
+            left *= 4
+            # cv2.rectangle(frame, (left, top), (right, bottom), (255,0,255), 2)
+            # cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (255,0,255), cv2.FILLED)
+            # font = cv2.FONT_HERSHEY_DUPLEX
+            # cv2.putText(frame, name, (left + 6, bottom - 6), font, 0.6, (0,0,0), 1)
+            face_list.append(FaceDetectionData(name=name, left=left, top=top, right=right, bottom=bottom))
 
-        return face_names, frame
+        # print(face_list)
+
+        return face_list, frame
 
 
 def main():
@@ -81,7 +87,7 @@ def main():
 
         face_names, frame = face_rec.process_frame(frame)
 
-        logging.info("Face detected -- {}".format(face_names))
+        # logging.info("Face detected -- {}".format(face_names))
 
         cv2.imshow('Video', frame)
 

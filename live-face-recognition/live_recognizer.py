@@ -94,7 +94,7 @@ class LiveeeeRecognizer:
                     # text_to_display = "Real: {:.4f}".format(score)
                     # cv2.putText(frame, text_to_display, (startX, startY - 10),
                     #             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-                    logging.debug(f"Real: {score} : {j}")
+                    # logging.debug(f"Real: {score} : {j}")
 
                     detection_list.append(LiveDetectionData(score, 'real', startX, startY, endX, endY))
 
@@ -103,7 +103,7 @@ class LiveeeeRecognizer:
                     # text_to_display = "Fake/Spoofed: {:.4f}".format(score)
                     # cv2.putText(frame, text_to_display, (startX, startY - 10),
                     #             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
-                    logging.debug(f"Fake: {score} : {j}")
+                    # logging.debug(f"Fake: {score} : {j}")
                     detection_list.append(LiveDetectionData(score, 'fake', startX, startY, endX, endY))
 
                 # cv2.putText(frame, label, (startX, startY - 10),
