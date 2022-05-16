@@ -11,4 +11,5 @@ class FaceDetectionData:
     bottom: int
 
     def get_COG(self):
-        return abs(self.left - self.bottom), abs(self.top - self.right)
+        # return abs(self.left - self.bottom), abs(self.top - self.right)
+        return ((self.left + self.right)/2, (self.top + self.bottom)/2)

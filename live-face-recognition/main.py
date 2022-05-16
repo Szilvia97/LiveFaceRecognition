@@ -54,15 +54,15 @@ def main():
             for detection in detection_list:
                 # TODO: draw if needed, see config
                 cv2.rectangle(frame, (detection.startX, detection.startY), (detection.endX, detection.endY), (255, 0, 255), 2)
-                # logging.debug(f"Live detection COG: {detection.get_COG()}")
+                logging.debug(f"Live detection COG: {detection.get_COG()}")
 
+                # (left, top), (right, bottom)
                 # cv2.rectangle(original_frame, (64, 56), (169, 198), (0, 255, 0), 2)
                 # cv2.rectangle(original_frame, (425, 419), (526, 559), (0, 255, 0), 2)
                 
                 for face in face_list:
                     cv2.rectangle(original_frame, (face.left, face.top), (face.right, face.bottom), (0, 255, 0), 2)
-                    # print(face.left, face.top, face.right, face.bottom)
-                    # logging.debug(f"Face detection COG: {face.get_COG()}")
+                    logging.debug(f"Face detection COG: {face.get_COG()}")
 
                         # if(dist(detection.get_COG(), face.get_COG()) < 1000):
                         #     print(face.name, detection.score, detection.text)

@@ -13,8 +13,9 @@ class LiveDetectionData:
 
     
 
-    # def get_COG(self):
-    #     return abs(self.startX - self.endX), abs(self.startY - self.endY)
+    def get_COG(self):
+        return ((self.startX + self.endX)/2, (self.startY + self.endY)/2)
+        # return abs(self.startX - self.endX), abs(self.startY - self.endY)
 
 # TODO: Add method for calculation COG:
 # TODO: Add method for text generation: score > config.score? "real": "fake"
