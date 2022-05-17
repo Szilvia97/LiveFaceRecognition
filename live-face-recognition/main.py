@@ -46,10 +46,10 @@ def main():
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
-        # if len(face_list) == 0:
+        if face_list:
         #     logging.info('nobody')
 
-        else:
+        # else:
             # multiple faces detected
             for detection in detection_list:
                 # TODO: draw if needed, see config
