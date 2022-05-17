@@ -49,7 +49,7 @@ class LiveeeeRecognizer:
         self.confidence = 0.7
 
     def process_frame(self, frame):
-        frame = imutils.resize(frame, width=600)
+        frame = imutils.resize(frame)
         (h, w) = frame.shape[:2]
         blob = cv2.dnn.blobFromImage(cv2.resize(frame, (300, 300)), 1.0,
                                      (300, 300), (104.0, 177.0, 123.0))
@@ -133,7 +133,7 @@ def main():
         detection_list, frame = live_rec.process_frame(frame)
         for detection in detection_list:
             score, text, startX, startY, endX, endY = detection
-            cv2.rectangle(frame, (startX, startY), (endX, endY), (0, 0, 255), 2)
+            # cv2.rectangle(frame, (startX, startY), (endX, endY), (0, 0, 255), 2)
 
         cv2.imshow('Video', frame)
 

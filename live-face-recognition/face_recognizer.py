@@ -61,8 +61,8 @@ class FaceRecognizer:
             left *= 4
             # cv2.rectangle(frame, (left, top), (right, bottom), (255,0,255), 2)
             # cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (255,0,255), cv2.FILLED)
-            # font = cv2.FONT_HERSHEY_DUPLEX
-            # cv2.putText(frame, name, (left + 6, bottom - 6), font, 0.6, (0,0,0), 1)
+            font = cv2.FONT_HERSHEY_DUPLEX
+            cv2.putText(frame, name, (left + 6, bottom - 6), font, 0.6, (0,0,0), 1)
             face_list.append(FaceDetectionData(name=name, left=left, top=top, right=right, bottom=bottom))
 
         # print(face_list)

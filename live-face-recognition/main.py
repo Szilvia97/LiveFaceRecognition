@@ -32,13 +32,13 @@ def main():
             # # a recognize, csak 0.6nal nagyobb rectanglebe kell keressen
 
 
-        frame = camera_streamer.get_latest_frame()
+        # frame = camera_streamer.get_latest_frame()
         original_frame = camera_streamer.get_latest_frame()
 
         # TODO: add to config: draw rectangle around detection
         # TODO: return a list of face_detection_data and list of live_detection_data
         face_list, frame = face_rec.process_frame(original_frame)
-        detection_list, frame = live_rec.process_frame(frame)
+        detection_list, frame = live_rec.process_frame(original_frame)
 
         # logging.info("Face detected -- {}".format(face_list))
         # logging.info("Live score -- {}".format(live_scores))
@@ -53,25 +53,28 @@ def main():
             # multiple faces detected
             for detection in detection_list:
                 # TODO: draw if needed, see config
-                cv2.rectangle(frame, (detection.startX, detection.startY), (detection.endX, detection.endY), (255, 0, 255), 2)
+                cv2.rectangle(original_frame, (detection.startX, detection.startY), (detection.endX, detection.endY), (255, 255, 255), 2)
                 logging.debug(f"Live detection COG: {detection.get_COG()}")
 
-                # (left, top), (right, bottom)
-                # cv2.rectangle(original_frame, (64, 56), (169, 198), (0, 255, 0), 2)
-                # cv2.rectangle(original_frame, (425, 419), (526, 559), (0, 255, 0), 2)
                 
-                for face in face_list:
-                    cv2.rectangle(original_frame, (face.left, face.top), (face.right, face.bottom), (0, 255, 0), 2)
-                    logging.debug(f"Face detection COG: {face.get_COG()}")
+            for face in face_list:
 
-                        # if(dist(detection.get_COG(), face.get_COG()) < 1000):
-                        #     print(face.name, detection.score, detection.text)
+                cv2.rectangle(original_frame, (face.left, face.top), (face.right, face.bottom), (0, 0, 0), 2)
+                logging.debug(f"Face detection COG: {face.get_COG()}")
+                        
+                        
+            print("--------------")
+            print(dist(detection.get_COG(), face.get_COG()))
+            print("--------------")
+
+            if(dist(detection.get_COG(), face.get_COG()) < 1500):
+                print(face.name, detection.score, detection.text)
 
 
             
                 
 
-        cv2.imshow('Video', frame)
+        cv2.imshow('Video', original_frame)
 
 
 if __name__ == '__main__':
