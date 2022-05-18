@@ -1,4 +1,6 @@
 import logging
+import time
+
 from keras.preprocessing.image import img_to_array
 from keras.models import load_model
 import imutils
@@ -112,7 +114,7 @@ class LiveeeeRecognizer:
                 #        (0, 0, 255), 2)
 
         # TODO should return detection+confidence, or only confident detections
-        return detection_list, frame
+        return detection_list
 
 
 def main():
@@ -130,10 +132,14 @@ def main():
     while True:
         frame = camera_streamer.get_latest_frame()
 
-        detection_list, frame = live_rec.process_frame(frame)
+        detection_list = live_rec.process_frame(frame)
+
         for detection in detection_list:
-            score, text, startX, startY, endX, endY = detection
-            cv2.rectangle(frame, (startX, startY), (endX, endY), (0, 0, 255), 2)
+            cv2.rectangle(frame, (detection.startX, detection.startY), (detection.endX, detection.endY), (255, 255, 255), 2)
+            cv2.putText(frame, detection.text, (detection.startX, detection.startY - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+
+        frame = cv2.resize(frame, (800, 600))
+        # cv2.namedWindow('Video', cv2.WINDOW_NORMAL)
 
         cv2.imshow('Video', frame)
 

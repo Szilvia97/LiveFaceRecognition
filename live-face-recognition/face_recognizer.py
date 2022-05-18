@@ -1,4 +1,3 @@
-
 import face_recognition
 import cv2
 from pathlib import Path
@@ -7,6 +6,7 @@ import os
 from camera_stream import CameraStream
 import logging.config
 from configparser import ConfigParser
+import time
 
 from face_detection_data import FaceDetectionData
 
@@ -32,12 +32,10 @@ class FaceRecognizer:
         face_locations = []
         face_encodings = []
         face_names = []
-        process_this_frame = True
 
         small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
 
         rgb_small_frame = small_frame[:, :, ::-1]
-        # print(rgb_small_frame)
 
         face_locations = face_recognition.face_locations(rgb_small_frame)
         face_encodings = face_recognition.face_encodings(rgb_small_frame, face_locations)
@@ -59,15 +57,10 @@ class FaceRecognizer:
             right *= 4
             bottom *= 4
             left *= 4
-            # cv2.rectangle(frame, (left, top), (right, bottom), (255,0,255), 2)
-            # cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (255,0,255), cv2.FILLED)
-            font = cv2.FONT_HERSHEY_DUPLEX
-            cv2.putText(frame, name, (left + 6, bottom - 6), font, 0.6, (0,0,0), 1)
+
             face_list.append(FaceDetectionData(name=name, left=left, top=top, right=right, bottom=bottom))
 
-        # print(face_list)
-
-        return face_list, frame
+        return face_list
 
 
 def main():
@@ -85,10 +78,16 @@ def main():
     while True:
         frame = camera_streamer.get_latest_frame()
 
-        face_names, frame = face_rec.process_frame(frame)
+        face_list = face_rec.process_frame(frame)
+
+        for face in face_list:
+            cv2.rectangle(frame, (face.left, face.top), (face.right, face.bottom), (0, 0, 0), 2)
+            cv2.putText(frame, face.name, (face.left + 6, face.bottom - 6), cv2.FONT_HERSHEY_DUPLEX, 0.6, (0, 0, 0), 1)
 
         # logging.info("Face detected -- {}".format(face_names))
 
+        frame = cv2.resize(frame, (800, 600))
+        # cv2.namedWindow('Video', cv2.WINDOW_NORMAL)
         cv2.imshow('Video', frame)
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
