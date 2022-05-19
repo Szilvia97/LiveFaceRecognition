@@ -16,7 +16,7 @@ def main():
     config_object.read(Path("config.ini"))
     config = config_object["DEFAULT"]
 
-    logging.config.fileConfig(Path("log_config.ini"))
+    # logging.config.fileConfig(Path("log_config.ini"))
 
     camera_streamer = CameraStream(config)
     camera_streamer.start()
@@ -48,7 +48,7 @@ def main():
                         # TODO: draw if needed, see config
                         if True:
                             cv2.rectangle(frame, (face.left, face.top), (face.right, face.bottom), (0, 0, 0), 2)
-                            cv2.putText(frame, face.name, (face.left + 6, face.bottom - 6), cv2.FONT_HERSHEY_DUPLEX, 0.6,
+                            cv2.putText(frame, face.name + " - " + detection.text, (face.left + 6, face.bottom - 6), cv2.FONT_HERSHEY_DUPLEX, 0.6,
                                         (0, 0, 0), 1)
 
 

@@ -21,7 +21,7 @@ class LiveeeeRecognizer:
     def __init__(self, config):
         # TODO add config
         self.config = config
-        self.min_live_score = self.config.getint('MIN_LIVE_SCORE')
+        self.min_live_score = self.config.getfloat('MIN_LIVE_SCORE')
         self.is_live = self.config.getint('IS_LIVE')
 
         #  TODO load values from config, ex paths
