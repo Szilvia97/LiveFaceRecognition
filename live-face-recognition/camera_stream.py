@@ -14,7 +14,6 @@ class CameraStream:
         self.width = self.config.getint('CAMERA_WIDTH')
         self.fps = self.config.getint('CAMERA_FPS')
 
-        # Prepare a blank image
         self.frame = np.zeros((self.height, self.width, 3), np.uint8)
 
         self.streamId = config.getint('CAMERA_ID')
@@ -23,7 +22,7 @@ class CameraStream:
         self.stream.set(cv2.CAP_PROP_FRAME_HEIGHT, self.height)
         self.stream.set(cv2.CAP_PROP_FPS, self.fps)
 
-        self.img = cv2.imread('1.jpg')
+        self.img = cv2.imread('3.jpg')
         if not self.stream.isOpened():
             logging.info(f'Failed to open camera: {self.streamId}')
             exit(1)
@@ -76,8 +75,6 @@ def main():
     config_object = ConfigParser()
     config_object.read(Path("config.ini"))
     config = config_object["DEFAULT"]
-
-    logging.config.fileConfig(Path("log_config.ini"))
 
     camera_streamer = CameraStream(config)
     camera_streamer.start()

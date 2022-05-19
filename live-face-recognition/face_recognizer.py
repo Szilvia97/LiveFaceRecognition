@@ -19,8 +19,6 @@ class FaceRecognizer:
         self.known_face_encodings = []
         self.known_face_names = []
 
-        # TODO path from config
-        # TODO load these somehow
         for file in Path("recognize-images").glob('*.png'):
             image = face_recognition.load_image_file(file)
             face_encoding = face_recognition.face_encodings(image)[0]
@@ -67,9 +65,6 @@ def main():
     config_object = ConfigParser()
     config_object.read(Path("config.ini"))
     config = config_object["DEFAULT"]
-
-    logging.config.fileConfig(Path("log_config.ini"))
-
     camera_streamer = CameraStream(config)
     camera_streamer.start()
 
@@ -84,10 +79,7 @@ def main():
             cv2.rectangle(frame, (face.left, face.top), (face.right, face.bottom), (0, 0, 0), 2)
             cv2.putText(frame, face.name, (face.left + 6, face.bottom - 6), cv2.FONT_HERSHEY_DUPLEX, 0.6, (0, 0, 0), 1)
 
-        # logging.info("Face detected -- {}".format(face_names))
-
         frame = cv2.resize(frame, (800, 600))
-        # cv2.namedWindow('Video', cv2.WINDOW_NORMAL)
         cv2.imshow('Video', frame)
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
