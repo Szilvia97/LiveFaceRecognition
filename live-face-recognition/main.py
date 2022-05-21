@@ -47,9 +47,9 @@ def main():
                     if dist(face_cog, detection_cog) < 100:
                         # TODO: draw if needed, see config
                         if True:
-                            cv2.rectangle(frame, (face.left, face.top), (face.right, face.bottom), (0, 0, 0), 2)
+                            cv2.rectangle(frame, (face.left, face.top), (face.right, face.bottom), (0, 255, 0), 2)
                             cv2.putText(frame, face.name + " - " + detection.text, (face.left + 6, face.bottom - 6), cv2.FONT_HERSHEY_DUPLEX, 0.6,
-                                        (0, 0, 0), 1)
+                                        (255, 0, 255), 1)
 
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
