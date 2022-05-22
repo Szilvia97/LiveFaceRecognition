@@ -46,7 +46,7 @@ while True:
             week = values['week']
             classroom = values['classroom']
             
-            result = firebase.post('Jelenlet/' + subject + '/' + type + '/' + className + '/' + week + '/' + classroom + '/' + date_string + '/' + time_string, studentData)  
+            result = firebase.patch('Jelenlet/' + subject + '/' + type + '/' + className + '/' + week + '/' + classroom + '/' + date_string + '/' + time_string, studentData)  
             print(result) 
         
             # psg.popup('Az óra adatai',      
