@@ -16,7 +16,6 @@ class Attendance:
         self.config = config
 
         self.camera_streamer = CameraStream(config)
-        self.camera_streamer.start()
 
         self.face_rec = FaceRecognizer(config)
         self.live_rec = LiveeeeRecognizer(config)
@@ -36,12 +35,16 @@ class Attendance:
         if self.started:
             return
 
+        self.camera_streamer.start()
+
         self.started = True
         self.thread.start()
 
     def stop(self):
         if self.started:
             self.started = False
+
+            self.camera_streamer.stop()
 
             self.thread.join()
 
@@ -51,27 +54,28 @@ class Attendance:
         while self.started:
             frame = self.camera_streamer.get_latest_frame()
 
-            self.face_list = self.face_rec.process_frame(frame)
-            self.live_list = self.live_rec.process_frame(frame)
-
-            if self.face_list:
-                for face in self.face_list:
-                    for detection in self.live_list:
-                        face_cog = face.get_COG()
-                        detection_cog = detection.get_COG()
-
-                        # TODO: remove
-                        logging.debug(
-                            f"Face: {face.get_COG()}, Live: {detection.get_COG()}, Dist = {dist(face.get_COG(), detection.get_COG())}")
-
-                        # TODO: add correct number here
-                        if dist(face_cog, detection_cog) < 100:
-                            # TODO: draw if needed, see config
-                            if True:
-                                cv2.rectangle(frame, (face.left, face.top), (face.right, face.bottom), (0, 255, 0), 2)
-                                cv2.putText(frame, face.name + " - " + detection.text, (face.left + 6, face.bottom - 6),
-                                            cv2.FONT_HERSHEY_DUPLEX, 0.6,
-                                            (255, 0, 255), 1)
+            # TODO: thread pool, this could be done in parallel
+            # self.face_list = self.face_rec.process_frame(frame)
+            # self.live_list = self.live_rec.process_frame(frame)
+            #
+            # if self.face_list:
+            #     for face in self.face_list:
+            #         for detection in self.live_list:
+            #             face_cog = face.get_COG()
+            #             detection_cog = detection.get_COG()
+            #
+            #             # TODO: remove
+            #             logging.debug(
+            #                 f"Face: {face.get_COG()}, Live: {detection.get_COG()}, Dist = {dist(face.get_COG(), detection.get_COG())}")
+            #
+            #             # TODO: add correct number here
+            #             if dist(face_cog, detection_cog) < 100:
+            #                 # TODO: draw if needed, see config
+            #                 if True:
+            #                     cv2.rectangle(frame, (face.left, face.top), (face.right, face.bottom), (0, 255, 0), 2)
+            #                     cv2.putText(frame, face.name + " - " + detection.text, (face.left + 6, face.bottom - 6),
+            #                                 cv2.FONT_HERSHEY_DUPLEX, 0.6,
+            #                                 (255, 0, 255), 1)
 
             self.read_lock.acquire()
             self.frame = frame
@@ -96,14 +100,14 @@ def main():
 
     while True:
         frame = attendance.get_latest_frame()
+        cv2.imshow('Video', frame)
+
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
-        cv2.imshow('Video', frame)
-
     attendance.stop()
+    cv2.destroyAllWindows()
 
 
 if __name__ == '__main__':
     main()
-
