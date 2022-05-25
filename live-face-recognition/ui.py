@@ -9,6 +9,7 @@ import threading
 import cv2
 import time
 import numpy as np
+import os
 
 
 class SimpleGui:
@@ -17,6 +18,7 @@ class SimpleGui:
         self.height = self.config.getint('CAMERA_HEIGHT')
         self.width = self.config.getint('CAMERA_WIDTH')
         self.fps = self.config.getint('CAMERA_FPS')
+        os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
         self.attendance = Attendance(self.config)
 
         # Prepare a blank image
@@ -27,6 +29,7 @@ class SimpleGui:
         psg.theme('LightGreen3')
 
         self.button_start_name = 'Kezdés'
+        self.button_stop_name = 'Leállítás'
 
         # self.layout = [
         #     [psg.Image(filename='', key='image_box', size=(self.height, self.width))],
@@ -45,8 +48,8 @@ class SimpleGui:
             [psg.Text('Válaszd ki a termet ', size=(30, 1), font='Lucida', justification='left')],
             [psg.Combo(['114', '312', '230'], key='classroom')],
             [psg.Image(filename='', key='image_box', size=(self.height, self.width))],
-            [psg.Button('Kezdes', font=('Times New Roman', 12), size=(10, 1)),
-            psg.Button('Leállítás', font=('Times New Roman', 12), size=(10, 1))]
+            [psg.Button(self.button_start_name, font=('Times New Roman', 12), size=(10, 1)),
+            psg.Button(self.button_stop_name, font=('Times New Roman', 12), size=(10, 1))]
             ]
 
         # self.window = psg.Window('Jelenlét', self.layout, size=(360, 360), auto_size_buttons=True, auto_size_text=True, resizable=True,
@@ -100,7 +103,7 @@ class SimpleGui:
 
 # while True:
 #     event, values = window.read()
-#     if event in ('Leállítás', None):
+#     if event in (self.button_stop_name, None):
 #         break
 #     if event == self.button_start_name:
 #         # attendance.start()
