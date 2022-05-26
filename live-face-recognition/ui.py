@@ -12,77 +12,87 @@ import numpy as np
 
 
 class SimpleGui:
+    fps = 0
+    selectable_size = (23, 1)
+    button_size = (20, 1)
+    font = ('Helvetica', 10)
+
     def __init__(self, config):
         self.config = config
-        self.height = self.config.getint('CAMERA_HEIGHT')
-        self.width = self.config.getint('CAMERA_WIDTH')
-        self.fps = self.config.getint('CAMERA_FPS')
-        self.attendance = Attendance(self.config)
+        self.diplay_image_height = self.config.getint('DISPLAY_IMAGE_HEIGHT')
+        self.diplay_image_width = self.config.getint('DISPLAY_IMAGE_WIDTH')
 
-        # Prepare a blank image
-        self.frame = np.zeros((self.height, self.width, 3), np.uint8)
+        self.attendance = Attendance(self.config)
 
         # firebase = firebase.FirebaseApplication('https://studentdatas-2ea41.firebaseio.com/', None)
 
         psg.theme('LightGreen3')
 
-        self.button_start_name = 'Kezdés'
+        self.button_start = self.config['BUTTON_START_LABEL']
+        self.button_stop = self.config['BUTTON_STOP_LABEL']
+        self.button_exit = self.config['BUTTON_EXIT_LABEL']
 
-        # self.layout = [
-        #     [psg.Image(filename='', key='image_box', size=(self.height, self.width))],
-        #     [psg.Button(self.button_start_name, size=(10, 1), font='Helvetica 14')]
-        # ]
+        # TODO: config with these
+        self.course_list = ['Szoftverteszteles',
+                            'OOP',
+                            'Szoftverfejlesztes',
+                            'Diszkret matematika',
+                            'Kriptografia',
+                            'Webtechnologiak']
+
+        self.specialization_list = ['Szamitastechnika', 'Informatika', 'Tavkozles']
+
+        self.room_list = ['114', '312', '230']
+
+        self.week_list = ['het1', 'het2', 'het3', 'het4', 'het5']
+
+        self.course_type_list = ['Eloadas', 'Labor']
+
+        data_column = [
+            [psg.Text('Válaszd ki a tárgyat')],
+            [psg.Combo(self.course_list, size=self.selectable_size, key='subject')],
+            [psg.Text('Válaszd ki az óra típusát')],
+            [psg.Combo(self.course_type_list, size=self.selectable_size, key='type')],
+            [psg.Text('Válaszd ki a szakot')],
+            [psg.Combo(self.specialization_list, size=self.selectable_size, key='class')],
+            [psg.Text('Válaszd ki a hetet')],
+            [psg.Combo(self.week_list, size=self.selectable_size, key='week')],
+            [psg.Text('Válaszd ki a termet')],
+            [psg.Combo(self.room_list, size=self.selectable_size, key='classroom')],
+            [psg.Button(self.button_start, size=self.button_size)],
+            [psg.Button(self.button_stop, size=self.button_size)],
+            [psg.Button(self.button_exit, size=self.button_size)]
+        ]
 
         self.layout = [
-            [psg.Text('Válaszd ki a tárgyat', size=(100, 1), font='Lucida', justification='left')],
-            [psg.Combo(['Szoftverteszteles', 'OOP', 'Szoftverfejlesztes', 'Diszkret matematika', 'Kriptografia','Webtechnologiak'], key='subject')],
-            [psg.Text('Válaszd ki az óra típusát ', size=(30, 1), font='Lucida', justification='left')],
-            [psg.Combo(['Eloadas', 'Labor'], key='type')],
-            [psg.Text('Válaszd ki a szakot ', size=(30, 1), font='Lucida', justification='left')],
-            [psg.Combo(['Szamitastechnika', 'Informatika', 'Tavkozles'], key='class')],
-            [psg.Text('Válaszd ki a hetet ', size=(30, 1), font='Lucida', justification='left')],
-            [psg.Combo(['het1', 'het2', 'het3', 'het4', 'het5'], key='week')],
-            [psg.Text('Válaszd ki a termet ', size=(30, 1), font='Lucida', justification='left')],
-            [psg.Combo(['114', '312', '230'], key='classroom')],
-            [psg.Image(filename='', key='image_box', size=(self.height, self.width))],
-            [psg.Button('Kezdes', font=('Times New Roman', 12), size=(10, 1)),
-            psg.Button('Leállítás', font=('Times New Roman', 12), size=(10, 1))]
+            [
+                psg.Image(key='image_box', size=(self.diplay_image_height, self.diplay_image_width)),
+                psg.Column(data_column),
             ]
+        ]
 
-        # self.window = psg.Window('Jelenlét', self.layout, size=(360, 360), auto_size_buttons=True, auto_size_text=True, resizable=True,
-        #             finalize=True)
-        self.window = psg.Window('PySimpleGUI', self.layout, location=(200, 200))
+        self.window = psg.Window('Attendance monitor', self.layout, font=self.font)
 
         self.previous_time = time.perf_counter()
 
-        self.started = False
-        self.thread = threading.Thread(target=self.update, name='WorkerThread', args=())
+    def run(self):
 
-    def start(self):
-        if self.started:
-            return
-
-        self.attendance.start()
-        self.started = True
-        self.thread.start()
-
-    def stop(self):
-        if self.started:
-            self.started = False
-
-            self.attendance.stop()
-            self.thread.join()
-
-    def update(self):
-        while self.started:
+        while True:
             frame = self.attendance.get_latest_frame()
 
             # Timeout = milliseconds to wait until the Read will return
             event, values = self.window.read(timeout=10)
 
-            if event == self.button_start_name or event == psg.WIN_CLOSED:
-                self.started = False
+            if event == self.button_exit or event == psg.WIN_CLOSED:
                 break
+
+            if event == self.button_start:
+                logging.info('Attendance monitor started ..')
+                self.attendance.start()
+
+            if event == self.stop:
+                logging.info('Attendance monitor stopped ..')
+                self.attendance.stop()
 
             current_time = time.perf_counter()
             elapsed_time = current_time - self.previous_time
@@ -90,13 +100,17 @@ class SimpleGui:
 
             if elapsed_time > 0:
                 fps_text = f"FPS: {self.fps} / {1 / elapsed_time:.2f}"
-                font = cv2.FONT_HERSHEY_DUPLEX
-                cv2.putText(frame, fps_text, (10, 20), font, 0.4, (255, 255, 255), 1)
+                cv2.putText(frame, fps_text, (10, 20), self.font, 0.4, (255, 255, 255), 1)
 
+            frame = cv2.resize(frame, (self.diplay_image_height,  self.diplay_image_width))
             img_bytes = cv2.imencode(".png", frame)[1].tobytes()
             self.window["image_box"].update(data=img_bytes)
 
         self.window.close()
+
+        if self.attendance.started:
+            self.attendance.stop()
+
 
 # while True:
 #     event, values = window.read()
@@ -138,13 +152,10 @@ def main():
     config_object.read(Path("config.ini"))
     config = config_object["DEFAULT"]
 
+    logging.config.fileConfig(Path("log_config.ini"))
+
     display = SimpleGui(config)
-    display.start()
-
-    while True:
-        pass
-
-    display.stop()
+    display.run()
 
 
 if __name__ == '__main__':

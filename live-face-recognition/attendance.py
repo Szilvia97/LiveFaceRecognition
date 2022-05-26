@@ -93,7 +93,7 @@ def main():
     config_object.read(Path("config.ini"))
     config = config_object["DEFAULT"]
 
-    # logging.config.fileConfig(Path("log_config.ini"))
+    logging.config.fileConfig(Path("log_config.ini"))
 
     attendance = Attendance(config)
     attendance.start()
