@@ -22,7 +22,6 @@ class CameraStream:
         self.stream.set(cv2.CAP_PROP_FRAME_HEIGHT, self.height)
         self.stream.set(cv2.CAP_PROP_FPS, self.fps)
 
-        # self.img = cv2.imread('3.jpg')
         if not self.stream.isOpened():
             logging.info(f'Failed to open camera: {self.streamId}')
             exit(1)
