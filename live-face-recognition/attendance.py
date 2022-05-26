@@ -21,7 +21,8 @@ class Attendance:
         self.live_rec = LiveeeeRecognizer(config)
 
         self.started = False
-        self.thread = threading.Thread(target=self.update, name='AttendancThread', args=())
+        self.thread = threading.Thread(
+            target=self.update, name='AttendanceThread', args=())
         self.read_lock = threading.Lock()
 
         self.height = self.config.getint('CAMERA_HEIGHT')
@@ -36,6 +37,7 @@ class Attendance:
 
         self.face_list = []
         self.live_list = []
+        self.identified_student_list = []
 
     def start(self):
         if self.started:
@@ -61,27 +63,31 @@ class Attendance:
             frame = self.camera_streamer.get_latest_frame()
 
             # TODO: thread pool, this could be done in parallel
-            # self.face_list = self.face_rec.process_frame(frame)
-            # self.live_list = self.live_rec.process_frame(frame)
-            #
-            # if self.face_list:
-            #     for face in self.face_list:
-            #         for detection in self.live_list:
-            #             face_cog = face.get_COG()
-            #             detection_cog = detection.get_COG()
-            #
-            #             # TODO: remove
-            #             logging.debug(
-            #                 f"Face: {face.get_COG()}, Live: {detection.get_COG()}, Dist = {dist(face.get_COG(), detection.get_COG())}")
-            #
-            #             # TODO: add correct number here
-            #             if dist(face_cog, detection_cog) < 100:
-            #                 # TODO: draw if needed, see config
-            #                 if True:
-            #                     cv2.rectangle(frame, (face.left, face.top), (face.right, face.bottom), (0, 255, 0), 2)
-            #                     cv2.putText(frame, face.name + " - " + detection.text, (face.left + 6, face.bottom - 6),
-            #                                 cv2.FONT_HERSHEY_DUPLEX, 0.6,
-            #                                 (255, 0, 255), 1)
+            self.face_list = self.face_rec.process_frame(frame)
+            self.live_list = self.live_rec.process_frame(frame)
+
+            if self.face_list:
+                for face in self.face_list:
+                    for detection in self.live_list:
+                        face_cog = face.get_COG()
+                        detection_cog = detection.get_COG()
+
+                        # TODO: remove
+                        # print(
+                        #     f"Face: {face.get_COG()}, Live: {detection.get_COG()}, Dist = {dist(face.get_COG(), detection.get_COG())}")
+
+                        # TODO: add correct number here
+                        if dist(face_cog, detection_cog) < 100:
+                            if face.name not in self.identified_student_list and detection.text == 'real' and face.name != 'Unknown':
+                                self.identified_student_list.append(face.name)
+                                print(self.identified_student_list)
+                            # TODO: draw if needed, see config
+                            if True:
+                                cv2.rectangle(
+                                    frame, (face.left, face.top), (face.right, face.bottom), (0, 255, 0), 2)
+                                cv2.putText(frame, face.name + " - " + detection.text, (face.left + 6, face.bottom - 6),
+                                            cv2.FONT_HERSHEY_DUPLEX, 0.6,
+                                            (255, 0, 255), 1)
 
             self.read_lock.acquire()
             self.frame = frame
@@ -95,7 +101,8 @@ class Attendance:
         self.read_lock.release()
 
         if resized_bytes:
-            frame = cv2.resize(frame, (self.diplay_image_height, self.diplay_image_width))
+            frame = cv2.resize(
+                frame, (self.diplay_image_height, self.diplay_image_width))
             frame_bytes = cv2.imencode(".png", frame)[1].tobytes()
             return frame_bytes
 
