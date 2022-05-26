@@ -27,7 +27,7 @@ class CameraStream:
             exit(1)
 
         self.started = False
-        self.thread = threading.Thread(target=self.update, name='WorkerThread', args=())
+        self.thread = threading.Thread(target=self.update, name='CamStreamThread', args=())
         self.read_lock = threading.Lock()
 
     def get_latest_frame(self) -> np.array:
