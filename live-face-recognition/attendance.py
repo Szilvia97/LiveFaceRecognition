@@ -2,13 +2,13 @@ from math import dist
 import numpy as np
 from face_recognizer import FaceRecognizer
 from live_recognizer import LiveeeeRecognizer
-from camera_stream import CameraStream
 import cv2
 from pathlib import Path
 from camera_stream import CameraStream
 import logging.config
 from configparser import ConfigParser
 import threading
+import time
 
 
 class Attendance:
@@ -21,12 +21,18 @@ class Attendance:
         self.live_rec = LiveeeeRecognizer(config)
 
         self.started = False
-        self.thread = threading.Thread(target=self.update, name='WorkerThread', args=())
+        self.thread = threading.Thread(target=self.update, name='AttendancThread', args=())
         self.read_lock = threading.Lock()
 
         self.height = self.config.getint('CAMERA_HEIGHT')
         self.width = self.config.getint('CAMERA_WIDTH')
         self.frame = np.zeros((self.height, self.width, 3), np.uint8)
+
+        self.diplay_image_height = self.config.getint('DISPLAY_IMAGE_HEIGHT')
+        self.diplay_image_width = self.config.getint('DISPLAY_IMAGE_WIDTH')
+
+        self.show_fps = config.getboolean('CAMERA_SHOW_FPS')
+        self.previous_time = time.perf_counter()
 
         self.face_list = []
         self.live_list = []
@@ -81,11 +87,20 @@ class Attendance:
             self.frame = frame
             self.read_lock.release()
 
-    def get_latest_frame(self) -> np.array:
+        logging.info('Stop')
+
+    def get_latest_frame(self, resized_bytes=True):
         self.read_lock.acquire()
         frame = self.frame.copy()
         self.read_lock.release()
+
+        if resized_bytes:
+            frame = cv2.resize(frame, (self.diplay_image_height, self.diplay_image_width))
+            frame_bytes = cv2.imencode(".png", frame)[1].tobytes()
+            return frame_bytes
+
         return frame
+
 
 def main():
     # TODO add config
@@ -99,7 +114,7 @@ def main():
     attendance.start()
 
     while True:
-        frame = attendance.get_latest_frame()
+        frame = attendance.get_latest_frame(resized_bytes=False)
         cv2.imshow('Video', frame)
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
