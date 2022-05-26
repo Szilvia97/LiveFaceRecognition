@@ -33,8 +33,6 @@ class CameraStream:
     def get_latest_frame(self) -> np.array:
         self.read_lock.acquire()
         frame = self.frame.copy()
-        # TODO: remove when using camera
-        # frame = self.img.copy()
         self.read_lock.release()
         return frame
 
