@@ -1,18 +1,12 @@
 import PySimpleGUI as psg
 # from firebase import firebase
-from datetime import datetime
 import logging.config
 from configparser import ConfigParser
 from pathlib import Path
 from attendance import Attendance
-import threading
-import cv2
-import time
-import numpy as np
 
 
 class SimpleGui:
-    fps = 0
     selectable_size = (23, 1)
     button_size = (20, 1)
     font = ('Helvetica', 10)
@@ -73,12 +67,9 @@ class SimpleGui:
 
         self.window = psg.Window('Attendance monitor', self.layout, font=self.font)
 
-        self.previous_time = time.perf_counter()
-
     def run(self):
-
         while True:
-            frame = self.attendance.get_latest_frame()
+            frame_bytes = self.attendance.get_latest_frame(resized_bytes=True)
 
             # Timeout = milliseconds to wait until the Read will return
             event, values = self.window.read(timeout=10)
@@ -87,29 +78,16 @@ class SimpleGui:
                 break
 
             if event == self.button_start:
-                logging.info('Attendance monitor started ..')
                 self.attendance.start()
 
-            if event == self.stop:
-                logging.info('Attendance monitor stopped ..')
-                self.attendance.stop()
+            if event == self.button_stop:
+                # TODO: start improc and start camera use separately?
+                pass
 
-            current_time = time.perf_counter()
-            elapsed_time = current_time - self.previous_time
-            self.previous_time = current_time
-
-            if elapsed_time > 0:
-                fps_text = f"FPS: {self.fps} / {1 / elapsed_time:.2f}"
-                cv2.putText(frame, fps_text, (10, 20), self.font, 0.4, (255, 255, 255), 1)
-
-            frame = cv2.resize(frame, (self.diplay_image_height,  self.diplay_image_width))
-            img_bytes = cv2.imencode(".png", frame)[1].tobytes()
-            self.window["image_box"].update(data=img_bytes)
+            self.window["image_box"].update(data=frame_bytes)
 
         self.window.close()
-
-        if self.attendance.started:
-            self.attendance.stop()
+        self.attendance.stop()
 
 
 # while True:
