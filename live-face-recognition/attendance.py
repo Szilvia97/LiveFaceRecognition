@@ -80,7 +80,7 @@ class Attendance:
                         if dist(face_cog, detection_cog) < 100:
                             if face.name not in self.identified_student_list and detection.text == 'real' and face.name != 'Unknown':
                                 self.identified_student_list.append(face.name)
-                                print(self.identified_student_list)
+                                # print(self.identified_student_list)
                             # TODO: draw if needed, see config
                             if True:
                                 cv2.rectangle(
@@ -104,7 +104,7 @@ class Attendance:
             frame = cv2.resize(
                 frame, (self.diplay_image_height, self.diplay_image_width))
             frame_bytes = cv2.imencode(".png", frame)[1].tobytes()
-            return frame_bytes
+            return frame_bytes, self.identified_student_list
 
         return frame
 

@@ -69,7 +69,9 @@ class SimpleGui:
 
     def run(self):
         while True:
-            frame_bytes = self.attendance.get_latest_frame(resized_bytes=True)
+            frame_bytes, lista = self.attendance.get_latest_frame(resized_bytes=True)
+
+            print(lista)
 
             # Timeout = milliseconds to wait until the Read will return
             event, values = self.window.read(timeout=10)
