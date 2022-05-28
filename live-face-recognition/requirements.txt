@@ -15,6 +15,6 @@ sklearn
 sklearn-deap2
 sklearn-deap2
 face-recognition
-pysimplegui
 python-firebase
+pysimplegui
 requests

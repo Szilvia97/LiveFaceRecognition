@@ -1,9 +1,11 @@
+import datetime
 import PySimpleGUI as psg
-# from firebase import firebase
 import logging.config
 from configparser import ConfigParser
 from pathlib import Path
 from attendance import Attendance
+from session_data import SessionData
+
 
 
 class SimpleGui:
@@ -20,6 +22,7 @@ class SimpleGui:
 
         # firebase = firebase.FirebaseApplication('https://studentdatas-2ea41.firebaseio.com/', None)
 
+
         psg.theme('LightGreen3')
 
         self.button_start = self.config['BUTTON_START_LABEL']
@@ -28,13 +31,13 @@ class SimpleGui:
 
         # TODO: config with these
         self.course_list = ['Szoftverteszteles',
-                            'OOP',
                             'Szoftverfejlesztes',
                             'Diszkret matematika',
                             'Kriptografia',
                             'Webtechnologiak']
 
-        self.specialization_list = ['Szamitastechnika', 'Informatika', 'Tavkozles']
+        self.specialization_list = [
+            'Szamitastechnika', 'Informatika', 'Tavkozles']
 
         self.room_list = ['114', '312', '230']
 
@@ -46,9 +49,11 @@ class SimpleGui:
             [psg.Text('Válaszd ki a tárgyat')],
             [psg.Combo(self.course_list, size=self.selectable_size, key='subject')],
             [psg.Text('Válaszd ki az óra típusát')],
-            [psg.Combo(self.course_type_list, size=self.selectable_size, key='type')],
+            [psg.Combo(self.course_type_list,
+                       size=self.selectable_size, key='type')],
             [psg.Text('Válaszd ki a szakot')],
-            [psg.Combo(self.specialization_list, size=self.selectable_size, key='class')],
+            [psg.Combo(self.specialization_list,
+                       size=self.selectable_size, key='class')],
             [psg.Text('Válaszd ki a hetet')],
             [psg.Combo(self.week_list, size=self.selectable_size, key='week')],
             [psg.Text('Válaszd ki a termet')],
@@ -60,18 +65,18 @@ class SimpleGui:
 
         self.layout = [
             [
-                psg.Image(key='image_box', size=(self.diplay_image_height, self.diplay_image_width)),
+                psg.Image(key='image_box', size=(
+                    self.diplay_image_height, self.diplay_image_width)),
                 psg.Column(data_column),
             ]
         ]
 
-        self.window = psg.Window('Attendance monitor', self.layout, font=self.font)
+        self.window = psg.Window('Attendance monitor',
+                                 self.layout, font=self.font)
 
     def run(self):
         while True:
-            frame_bytes, lista = self.attendance.get_latest_frame(resized_bytes=True)
-
-            print(lista)
+            frame_bytes = self.attendance.get_latest_frame(resized_bytes=True)
 
             # Timeout = milliseconds to wait until the Read will return
             event, values = self.window.read(timeout=10)
@@ -80,7 +85,15 @@ class SimpleGui:
                 break
 
             if event == self.button_start:
-                self.attendance.start()
+                # TODO: ADD SESSION DATA TO ATTENDANCE
+                session_data = SessionData(subject=values['subject'],
+                                           type=values['type'],
+                                           className=values['class'],
+                                           week=values['week'],
+                                           classroom=values['classroom'],
+                                           date=datetime.datetime.now().strftime("%Y-%m-%d"),
+                                           time=datetime.datetime.now().strftime("%H:%M:%S"))
+                self.attendance.start(session_data)
 
             if event == self.button_stop:
                 # TODO: start improc and start camera use separately?
@@ -100,26 +113,26 @@ class SimpleGui:
 #         # attendance.start()
 #         # win.close()
 #         now = datetime.now()
-#         date_string = now.strftime("%Y-%m-%d")
-#         time_string = now.strftime("%H:%M:%S")
+        # date_string = now.strftime("%Y-%m-%d")
+        # time_string = now.strftime("%H:%M:%S")
 #
-#         studentData = {'deviceId': '',
-#                        'isAttendanceRecovery': '',
-#                        'neptunId': '',
-#                        'profile': '',
-#                        'studentName': ''
-#                        }
+        # studentData = {'deviceId': '',
+        #                'isAttendanceRecovery': '',
+        #                'neptunId': '',
+        #                'profile': '',
+        #                'studentName': ''
+        #                }
 #
-#         subject = values['subject']
-#         type = values['type']
-#         className = values['class']
-#         week = values['week']
-#         classroom = values['classroom']
+        # subject = values['subject']
+        # type = values['type']
+        # className = values['class']
+        # week = values['week']
+        # classroom = values['classroom']
 #
-#         # result = firebase.patch(
-#         #     'Jelenlet/' + subject + '/' + type + '/' + className + '/' + week + '/' + classroom + '/' + date_string + '/' + time_string,
-#         #     studentData)
-#         # print(result)
+        # result = firebase.patch(
+        #     'Jelenlet/' + subject + '/' + type + '/' + className + '/' + week + '/' + classroom + '/' + date_string + '/' + time_string,
+        #     studentData)
+        # print(result)
 #
 #         # psg.popup('Az óra adatai',
 #         # 'Az óra neve: '+ values['subject'] + '\nTípusa: '+ values['type'] +' \nIdőpont: ' + classTime[1:len(classTime)-1] +' \nSzak: ' + values['class'])

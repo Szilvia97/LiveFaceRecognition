@@ -9,6 +9,8 @@ import logging.config
 from configparser import ConfigParser
 import threading
 import time
+from firebase import firebase
+from session_data import SessionData
 
 
 class Attendance:
@@ -35,13 +37,18 @@ class Attendance:
         self.show_fps = config.getboolean('CAMERA_SHOW_FPS')
         self.previous_time = time.perf_counter()
 
+        self.db = firebase.FirebaseApplication('https://studentdatas-2ea41.firebaseio.com/', None)
+
         self.face_list = []
         self.live_list = []
         self.identified_student_list = []
 
-    def start(self):
+    def start(self, session_data: SessionData):
         if self.started:
             return
+
+        self.session_data = session_data
+        self.identified_student_list.clear()
 
         self.camera_streamer.start()
 
@@ -80,6 +87,19 @@ class Attendance:
                         if dist(face_cog, detection_cog) < 100:
                             if face.name not in self.identified_student_list and detection.text == 'real' and face.name != 'Unknown':
                                 self.identified_student_list.append(face.name)
+                                studentData = {'deviceId': '',
+                                               'isAttendanceRecovery': '',
+                                               'neptunId': face.name,
+                                               'profile': '',
+                                               'studentName': ''
+                                               }
+                                print(self.session_data)
+                                # TODO: push data to firebase
+                                result = self.db.patch('Jelenlet/' + self.session_data.subject + '/' + self.session_data.type + '/' + self.session_data.className + '/' +
+                                                        self.session_data.week + '/' + self.session_data.classroom + '/' +
+                                                        self.session_data.date + '/' + self.session_data.time + '/' + face.name,
+                                                        studentData)
+                                print(result)
                                 # print(self.identified_student_list)
                             # TODO: draw if needed, see config
                             if True:
@@ -104,9 +124,16 @@ class Attendance:
             frame = cv2.resize(
                 frame, (self.diplay_image_height, self.diplay_image_width))
             frame_bytes = cv2.imencode(".png", frame)[1].tobytes()
-            return frame_bytes, self.identified_student_list
+            return frame_bytes
 
         return frame
+
+    def get_identified_student_list(self):
+        self.read_lock.acquire()
+        identified_student_list = self.identified_student_list.copy()
+        self.read_lock.release()
+
+        return identified_student_list
 
 
 def main():
@@ -118,7 +145,7 @@ def main():
     logging.config.fileConfig(Path("log_config.ini"))
 
     attendance = Attendance(config)
-    attendance.start()
+    attendance.start(session_data=SessionData)
 
     while True:
         frame = attendance.get_latest_frame(resized_bytes=False)
