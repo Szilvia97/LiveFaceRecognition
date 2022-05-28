@@ -5,6 +5,7 @@ from configparser import ConfigParser
 from pathlib import Path
 from attendance import Attendance
 from session_data import SessionData
+import ptoaster
 
 
 
@@ -60,7 +61,7 @@ class SimpleGui:
             [psg.Combo(self.room_list, size=self.selectable_size, key='classroom')],
             [psg.Button(self.button_start, size=self.button_size)],
             [psg.Button(self.button_stop, size=self.button_size)],
-            [psg.Button(self.button_exit, size=self.button_size)]
+            [psg.Button(self.button_exit, size=self.button_size)],
         ]
 
         self.layout = [
@@ -74,6 +75,9 @@ class SimpleGui:
         self.window = psg.Window('Attendance monitor',
                                  self.layout, font=self.font)
 
+        # self.input_key_list = [key for key, value in self.window.key_dict.items()
+        #     if isinstance(value, psg.Input)]
+        
     def run(self):
         while True:
             frame_bytes = self.attendance.get_latest_frame(resized_bytes=True)
@@ -85,15 +89,25 @@ class SimpleGui:
                 break
 
             if event == self.button_start:
-                # TODO: ADD SESSION DATA TO ATTENDANCE
-                session_data = SessionData(subject=values['subject'],
+
+                # if all(map(str.strip, [values[key] for key in self.input_key_list])):
+                if values['subject'] != "" and values['type'] != "" and values['class'] != "" and values['week'] != "" and values['classroom'] != "":
+                    # ptoaster.notify('OK', 'All inputs are OK!')
+                    psg.popup('OK','Az adatok mentése elkezdődött!')
+
+                    session_data = SessionData(subject=values['subject'],
                                            type=values['type'],
                                            className=values['class'],
                                            week=values['week'],
                                            classroom=values['classroom'],
                                            date=datetime.datetime.now().strftime("%Y-%m-%d"),
                                            time=datetime.datetime.now().strftime("%H:%M:%S"))
-                self.attendance.start(session_data)
+                    self.attendance.start(session_data)
+                else:
+                    # ptoaster.notify('Ups..', 'Some inputs missed!')
+                    psg.popup('Hiba','Minden mező kitöltése kötelező!')
+                    
+                
 
             if event == self.button_stop:
                 # TODO: start improc and start camera use separately?
