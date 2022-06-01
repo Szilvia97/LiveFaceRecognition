@@ -82,18 +82,20 @@ class Attendance:
                         if dist(face_cog, detection_cog) < 100:
                             if face.name not in self.identified_student_list and detection.text == 'real' and face.name != 'Unknown':
                                 self.identified_student_list.append(face.name)
-                                studentData = {'deviceId': '',
-                                               'isAttendanceRecovery': '',
-                                               'neptunId': face.name,
-                                               'profile': '',
-                                               'studentName': ''
+
+                                items = face.name.split('_')
+
+                                studentData = {'isAttendanceRecovery': False,
+                                               'neptunId': items[0],
+                                               'profile': items[2],
+                                               'studentName': items[1]
                                                }
 
                                 print(self.session_data)
 
                                 result = self.db.patch('Jelenlet/' + self.session_data.subject + '/' + self.session_data.type + '/' + self.session_data.className + '/' +
                                                         self.session_data.week + '/' + self.session_data.classroom + '/' +
-                                                        self.session_data.date + '/' + self.session_data.time + '/' + face.name,
+                                                        self.session_data.date + '/' + self.session_data.time + '/' + items[0],
                                                         studentData)
                                 print(result)
 

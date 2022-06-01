@@ -63,7 +63,7 @@ class RegisterGui:
 
             if event == self.button_save:
                 if values['class'] != "" and values['name'] != "" and values['neptun_id'] != "":
-                    cv2.imwrite('recognize-images/' + values['neptun_id'] + "_" + values['name'] + "_" + values['class'] + '.jpg', frame)
+                    cv2.imwrite('recognize-images/' + values['neptun_id'] + "_" + values['name'] + "_" + values['class'] + '.png', frame)
                     psg.popup('OK', 'Diák mentve!')
                 else:
                     psg.popup('Hiba', 'Minden mező kitöltése kötelező!')
