@@ -5,8 +5,7 @@ from configparser import ConfigParser
 from pathlib import Path
 from attendance import Attendance
 from session_data import SessionData
-import ptoaster
-
+import cv2
 
 
 class SimpleGui:
@@ -21,14 +20,13 @@ class SimpleGui:
 
         self.attendance = Attendance(self.config)
 
-        # firebase = firebase.FirebaseApplication('https://studentdatas-2ea41.firebaseio.com/', None)
-
 
         psg.theme('LightGreen3')
 
         self.button_start = self.config['BUTTON_START_LABEL']
         self.button_stop = self.config['BUTTON_STOP_LABEL']
         self.button_exit = self.config['BUTTON_EXIT_LABEL']
+        self.button_photo = self.config['BUTTON_PHOTO_LABEL']
 
         # TODO: config with these
         self.course_list = ['Szoftverteszteles',
@@ -62,6 +60,19 @@ class SimpleGui:
             [psg.Button(self.button_start, size=self.button_size)],
             [psg.Button(self.button_stop, size=self.button_size)],
             [psg.Button(self.button_exit, size=self.button_size)],
+            [psg.Button(self.button_photo, size=self.button_size)],
+        ]
+
+        self.student_data_column = [
+            [psg.Text('Szak:')],
+            [psg.Combo(self.specialization_list,
+                   size=self.selectable_size, key='class')],
+            [psg.Text('Teljes név:')],
+            [psg.Input(key='name', enable_events=True)],
+            [psg.Text('Neptun azonosító:')],
+            [psg.Input(key='neptun_id', enable_events=True)],
+            [psg.Text(size=(25, 1), k='-OUTPUT-')],
+            [psg.Button(self.button_exit, size=self.button_size)],
         ]
 
         self.layout = [
@@ -77,7 +88,27 @@ class SimpleGui:
 
         # self.input_key_list = [key for key, value in self.window.key_dict.items()
         #     if isinstance(value, psg.Input)]
-        
+    def make_photo(self):
+        camera = cv2.VideoCapture(0)
+        while True:
+            return_value, image = camera.read()
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            cv2.imshow('image', gray)
+            if cv2.waitKey(1) & 0xFF == ord('s'):
+                cv2.imwrite('recognize-images/test.jpg', image)
+                break
+        camera.release()
+        cv2.destroyAllWindows()
+
+    def add_photos_window(self):
+        self.layout = [
+            [psg.Image(key='image_box', size=(
+                self.diplay_image_height, self.diplay_image_width)),
+             psg.Column(self.student_data_column),
+            ]
+        ]
+        return psg.Window('Save pictures of students', self.layout, finalize=True)
+
     def run(self):
         while True:
             frame_bytes = self.attendance.get_latest_frame(resized_bytes=True)
@@ -88,26 +119,28 @@ class SimpleGui:
             if event == self.button_exit or event == psg.WIN_CLOSED:
                 break
 
+            if event == self.button_photo:
+                self.add_photos_window()
+                # self.make_photo()
+
             if event == self.button_start:
 
                 # if all(map(str.strip, [values[key] for key in self.input_key_list])):
                 if values['subject'] != "" and values['type'] != "" and values['class'] != "" and values['week'] != "" and values['classroom'] != "":
                     # ptoaster.notify('OK', 'All inputs are OK!')
-                    psg.popup('OK','Az adatok mentése elkezdődött!')
+                    psg.popup('OK', 'Az adatok mentése elkezdődött!')
 
                     session_data = SessionData(subject=values['subject'],
-                                           type=values['type'],
-                                           className=values['class'],
-                                           week=values['week'],
-                                           classroom=values['classroom'],
-                                           date=datetime.datetime.now().strftime("%Y-%m-%d"),
-                                           time=datetime.datetime.now().strftime("%H:%M:%S"))
+                                               type=values['type'],
+                                               className=values['class'],
+                                               week=values['week'],
+                                               classroom=values['classroom'],
+                                               date=datetime.datetime.now().strftime("%Y-%m-%d"),
+                                               time=datetime.datetime.now().strftime("%H:%M:%S"))
                     self.attendance.start(session_data)
                 else:
                     # ptoaster.notify('Ups..', 'Some inputs missed!')
-                    psg.popup('Hiba','Minden mező kitöltése kötelező!')
-                    
-                
+                    psg.popup('Hiba', 'Minden mező kitöltése kötelező!')
 
             if event == self.button_stop:
                 # TODO: start improc and start camera use separately?
@@ -119,39 +152,6 @@ class SimpleGui:
         self.attendance.stop()
 
 
-# while True:
-#     event, values = window.read()
-#     if event in ('Leállítás', None):
-#         break
-#     if event == self.button_start_name:
-#         # attendance.start()
-#         # win.close()
-#         now = datetime.now()
-        # date_string = now.strftime("%Y-%m-%d")
-        # time_string = now.strftime("%H:%M:%S")
-#
-        # studentData = {'deviceId': '',
-        #                'isAttendanceRecovery': '',
-        #                'neptunId': '',
-        #                'profile': '',
-        #                'studentName': ''
-        #                }
-#
-        # subject = values['subject']
-        # type = values['type']
-        # className = values['class']
-        # week = values['week']
-        # classroom = values['classroom']
-#
-        # result = firebase.patch(
-        #     'Jelenlet/' + subject + '/' + type + '/' + className + '/' + week + '/' + classroom + '/' + date_string + '/' + time_string,
-        #     studentData)
-        # print(result)
-#
-#         # psg.popup('Az óra adatai',
-#         # 'Az óra neve: '+ values['subject'] + '\nTípusa: '+ values['type'] +' \nIdőpont: ' + classTime[1:len(classTime)-1] +' \nSzak: ' + values['class'])
-#
-#     # elif event == 'Download':
 
 
 def main():
