@@ -36,6 +36,12 @@ class CameraStream:
         self.read_lock.release()
         return frame
 
+    def resize_frame_to_bytes(self, frame, width, height):
+        frame = cv2.resize(frame, (height, width))
+        frame_bytes = cv2.imencode(".png", frame)[1].tobytes()
+        return frame_bytes
+
+
     def start(self):
         if self.started:
             return

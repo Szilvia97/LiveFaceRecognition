@@ -79,11 +79,6 @@ class Attendance:
                         face_cog = face.get_COG()
                         detection_cog = detection.get_COG()
 
-                        # TODO: remove
-                        # print(
-                        #     f"Face: {face.get_COG()}, Live: {detection.get_COG()}, Dist = {dist(face.get_COG(), detection.get_COG())}")
-
-                        # TODO: add correct number here
                         if dist(face_cog, detection_cog) < 100:
                             if face.name not in self.identified_student_list and detection.text == 'real' and face.name != 'Unknown':
                                 self.identified_student_list.append(face.name)
@@ -93,15 +88,15 @@ class Attendance:
                                                'profile': '',
                                                'studentName': ''
                                                }
+
                                 print(self.session_data)
-                                # TODO: push data to firebase
+
                                 result = self.db.patch('Jelenlet/' + self.session_data.subject + '/' + self.session_data.type + '/' + self.session_data.className + '/' +
                                                         self.session_data.week + '/' + self.session_data.classroom + '/' +
                                                         self.session_data.date + '/' + self.session_data.time + '/' + face.name,
                                                         studentData)
                                 print(result)
-                                # print(self.identified_student_list)
-                            # TODO: draw if needed, see config
+
                             if True:
                                 cv2.rectangle(
                                     frame, (face.left, face.top), (face.right, face.bottom), (0, 255, 0), 2)
@@ -137,7 +132,6 @@ class Attendance:
 
 
 def main():
-    # TODO add config
     config_object = ConfigParser()
     config_object.read(Path("config.ini"))
     config = config_object["DEFAULT"]

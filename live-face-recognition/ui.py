@@ -7,6 +7,8 @@ from attendance import Attendance
 from session_data import SessionData
 import cv2
 
+from ui_register import RegisterGui
+
 
 class SimpleGui:
     selectable_size = (23, 1)
@@ -63,17 +65,6 @@ class SimpleGui:
             [psg.Button(self.button_photo, size=self.button_size)],
         ]
 
-        self.student_data_column = [
-            [psg.Text('Szak:')],
-            [psg.Combo(self.specialization_list,
-                   size=self.selectable_size, key='class')],
-            [psg.Text('Teljes név:')],
-            [psg.Input(key='name', enable_events=True)],
-            [psg.Text('Neptun azonosító:')],
-            [psg.Input(key='neptun_id', enable_events=True)],
-            [psg.Text(size=(25, 1), k='-OUTPUT-')],
-            [psg.Button(self.button_exit, size=self.button_size)],
-        ]
 
         self.layout = [
             [
@@ -83,51 +74,28 @@ class SimpleGui:
             ]
         ]
 
+        
         self.window = psg.Window('Attendance monitor',
                                  self.layout, font=self.font)
 
-        # self.input_key_list = [key for key, value in self.window.key_dict.items()
-        #     if isinstance(value, psg.Input)]
-    def make_photo(self):
-        camera = cv2.VideoCapture(0)
-        while True:
-            return_value, image = camera.read()
-            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-            cv2.imshow('image', gray)
-            if cv2.waitKey(1) & 0xFF == ord('s'):
-                cv2.imwrite('recognize-images/test.jpg', image)
-                break
-        camera.release()
-        cv2.destroyAllWindows()
-
-    def add_photos_window(self):
-        self.layout = [
-            [psg.Image(key='image_box', size=(
-                self.diplay_image_height, self.diplay_image_width)),
-             psg.Column(self.student_data_column),
-            ]
-        ]
-        return psg.Window('Save pictures of students', self.layout, finalize=True)
+    
 
     def run(self):
         while True:
             frame_bytes = self.attendance.get_latest_frame(resized_bytes=True)
 
-            # Timeout = milliseconds to wait until the Read will return
             event, values = self.window.read(timeout=10)
 
             if event == self.button_exit or event == psg.WIN_CLOSED:
                 break
 
             if event == self.button_photo:
-                self.add_photos_window()
-                # self.make_photo()
+                register_gui = RegisterGui(self.config)
+                register_gui.run()
 
             if event == self.button_start:
 
-                # if all(map(str.strip, [values[key] for key in self.input_key_list])):
                 if values['subject'] != "" and values['type'] != "" and values['class'] != "" and values['week'] != "" and values['classroom'] != "":
-                    # ptoaster.notify('OK', 'All inputs are OK!')
                     psg.popup('OK', 'Az adatok mentése elkezdődött!')
 
                     session_data = SessionData(subject=values['subject'],
@@ -139,11 +107,10 @@ class SimpleGui:
                                                time=datetime.datetime.now().strftime("%H:%M:%S"))
                     self.attendance.start(session_data)
                 else:
-                    # ptoaster.notify('Ups..', 'Some inputs missed!')
                     psg.popup('Hiba', 'Minden mező kitöltése kötelező!')
 
             if event == self.button_stop:
-                # TODO: start improc and start camera use separately?
+                self.attendance.stop()
                 pass
 
             self.window["image_box"].update(data=frame_bytes)
