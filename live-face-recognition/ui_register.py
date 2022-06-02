@@ -22,15 +22,18 @@ class RegisterGui:
         self.button_exit = self.config['BUTTON_EXIT_LABEL']
         self.button_save = self.config['BUTTON_SAVE_LABEL']
 
-        self.specialization_list = [
-            'Szamitastechnika', 'Informatika', 'Tavkozles']
+        self.select_full_name_label = self.config['FULL_NAME_LABEL']
+        self.select_neptun_id_label = self.config['NEPTUN_ID_LABEL']
+        self.select_specialization_label = self.config['SELECT_SPECIALIZATION_LABEL']
+
+        self.specialization_list = self.config['SPECIALIZATION_LIST'].split(',')
 
         self.student_data_column = [
-            [psg.Text('Szak:')],
+            [psg.Text(self.select_specialization_label)],
             [psg.Combo(self.specialization_list, size=self.selectable_size, key='class')],
-            [psg.Text('Teljes név:')],
+            [psg.Text(self.select_full_name_label)],
             [psg.Input(key='name', size=self.selectable_size, enable_events=True)],
-            [psg.Text('Neptun azonosító:')],
+            [psg.Text(self.select_neptun_id_label)],
             [psg.Input(key='neptun_id', size=self.selectable_size, enable_events=True)],
             [psg.Text(size=(25, 1), k='-OUTPUT-')],
             [psg.Button(self.button_exit, size=self.button_size)],

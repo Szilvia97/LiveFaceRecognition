@@ -30,35 +30,36 @@ class SimpleGui:
         self.button_exit = self.config['BUTTON_EXIT_LABEL']
         self.button_photo = self.config['BUTTON_PHOTO_LABEL']
 
-        # TODO: config with these
-        self.course_list = ['Szoftverteszteles',
-                            'Szoftverfejlesztes',
-                            'Diszkret matematika',
-                            'Kriptografia',
-                            'Webtechnologiak']
+        self.select_course_label = self.config['SELECT_COURSE_LABEL']
+        self.select_course_type_label = self.config['SELECT_COURSE_TYPE_LABEL']
+        self.select_room_label = self.config['SELECT_ROOM_LABEL']
+        self.select_week_label = self.config['SELECT_WEEK_LABEL']
+        self.select_specialization_label = self.config['SELECT_SPECIALIZATION_LABEL']
 
-        self.specialization_list = [
-            'Szamitastechnika', 'Informatika', 'Tavkozles']
+        self.course_list = self.config['COURSE_LIST'].split(',')
 
-        self.room_list = ['114', '312', '230']
+        self.specialization_list = self.config['SPECIALIZATION_LIST'].split(',')
 
-        self.week_list = ['het1', 'het2', 'het3', 'het4', 'het5']
+        self.room_list = self.config['ROOM_LIST'].split(',')
 
-        self.course_type_list = ['Eloadas', 'Labor']
+        self.week_list = self.config['WEEK_LIST'].split(',')
+
+        self.course_type_list = self.config['COURSE_TYPE_LIST'].split(',')
 
         data_column = [
-            [psg.Text('Válaszd ki a tárgyat')],
+            [psg.Text(self.select_course_label)],
             [psg.Combo(self.course_list, size=self.selectable_size, key='subject')],
-            [psg.Text('Válaszd ki az óra típusát')],
+            [psg.Text(self.select_course_type_label)],
             [psg.Combo(self.course_type_list,
                        size=self.selectable_size, key='type')],
-            [psg.Text('Válaszd ki a szakot')],
+            [psg.Text(self.select_specialization_label)],
             [psg.Combo(self.specialization_list,
                        size=self.selectable_size, key='class')],
-            [psg.Text('Válaszd ki a hetet')],
+            [psg.Text(self.select_week_label)],
             [psg.Combo(self.week_list, size=self.selectable_size, key='week')],
-            [psg.Text('Válaszd ki a termet')],
+            [psg.Text(self.select_room_label)],
             [psg.Combo(self.room_list, size=self.selectable_size, key='classroom')],
+            [psg.Text(size=(25, 1), k='-OUTPUT-')],
             [psg.Button(self.button_start, size=self.button_size)],
             [psg.Button(self.button_stop, size=self.button_size)],
             [psg.Button(self.button_exit, size=self.button_size)],
@@ -96,7 +97,7 @@ class SimpleGui:
             if event == self.button_start:
 
                 if values['subject'] != "" and values['type'] != "" and values['class'] != "" and values['week'] != "" and values['classroom'] != "":
-                    psg.popup('OK', 'Az adatok mentése elkezdődött!')
+                    psg.popup('OK', 'Az adatok mentése elkezdődik!')
 
                     session_data = SessionData(subject=values['subject'],
                                                type=values['type'],
