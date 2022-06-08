@@ -30,7 +30,7 @@ class RegisterGui:
 
         self.student_data_column = [
             [psg.Text(self.select_specialization_label)],
-            [psg.Combo(self.specialization_list, size=self.selectable_size, key='class')],
+            [psg.Combo(self.specialization_list, size=self.selectable_size, key='class', default_value=self.specialization_list[0])],
             [psg.Text(self.select_full_name_label)],
             [psg.Input(key='name', size=self.selectable_size, enable_events=True)],
             [psg.Text(self.select_neptun_id_label)],

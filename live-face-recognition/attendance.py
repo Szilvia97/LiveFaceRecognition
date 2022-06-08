@@ -99,12 +99,20 @@ class Attendance:
                                                         studentData)
                                 print(result)
 
-                            if True:
+                            cv2.rectangle(
+                                frame, (face.left, face.top), (face.right, face.bottom), (0, 255, 0), 2)
+                            cv2.putText(frame, items[1] + " - " + detection.text, (face.left + 6, face.bottom - 6),
+                                        cv2.FONT_HERSHEY_DUPLEX, 1.0,
+                                        (255, 255, 255), 1)
+
+                            if detection.text == 'fake' or items[1] == 'Unknown':
                                 cv2.rectangle(
-                                    frame, (face.left, face.top), (face.right, face.bottom), (0, 255, 0), 2)
-                                cv2.putText(frame, face.name + " - " + detection.text, (face.left + 6, face.bottom - 6),
-                                            cv2.FONT_HERSHEY_DUPLEX, 0.6,
-                                            (255, 0, 255), 1)
+                                    frame, (face.left, face.top), (face.right, face.bottom), (0, 0, 255), 2)
+                                cv2.putText(frame, items[1] + " - " + detection.text, (face.left + 6, face.bottom - 6),
+                                            cv2.FONT_HERSHEY_DUPLEX, 1.0,
+                                            (255, 255, 255), 1)
+
+                            
 
             self.read_lock.acquire()
             self.frame = frame
