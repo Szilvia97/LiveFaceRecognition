@@ -1,8 +1,3 @@
-# USAGE
-# python generate_frames.py --input videos/real1.mp4 --output dataset/real --detector face_detector_config --skip 1
-# python generate_frames.py --input videos/fake1.mp4 --output dataset/fake --detector face_detector_config --skip 4
-
-
 import numpy as np
 import argparse
 import cv2

@@ -12,19 +12,15 @@ from camera_stream import CameraStream
 import logging.config
 from configparser import ConfigParser
 
-# TODO:
-# https://www.geeksforgeeks.org/difference-between-dataclass-vs-namedtuple-vs-object-in-python/
 from collections import namedtuple
 from live_detection_data import LiveDetectionData
 
-class LiveeeeRecognizer:
+class MyLiveRecognizer:
     def __init__(self, config):
-        # TODO add config
         self.config = config
         self.min_live_score = self.config.getfloat('MIN_LIVE_SCORE')
         self.is_live = self.config.getint('IS_LIVE')
 
-        #  TODO load values from config, ex paths
         logging.info("Loading face detector...")
         self.protoPath = "face_detector_config/deploy.prototxt"
         self.modelPath = "face_detector_config/res10_300x300_ssd_iter_140000.caffemodel"
@@ -38,7 +34,6 @@ class LiveeeeRecognizer:
         self.confidence = 0.7
 
     def process_frame(self, frame):
-        # frame = imutils.resize(frame, width=600)
         (h, w) = frame.shape[:2]
         blob = cv2.dnn.blobFromImage(cv2.resize(frame, (300, 300)), 1.0,
                                      (300, 300), (104.0, 177.0, 123.0))
@@ -70,7 +65,6 @@ class LiveeeeRecognizer:
                 j = np.argmax(predictions)
                 score = predictions[j]
 
-                # TODO only draw rectangle when enabled from config
                 if score > self.min_live_score and j == self.is_live:
                     detection_list.append(LiveDetectionData(score, 'real', startX, startY, endX, endY))
 
@@ -88,7 +82,7 @@ def main():
     camera_streamer = CameraStream(config)
     camera_streamer.start()
 
-    live_rec = LiveeeeRecognizer(config)
+    live_rec = MyLiveRecognizer(config)
 
     while True:
         frame = camera_streamer.get_latest_frame()

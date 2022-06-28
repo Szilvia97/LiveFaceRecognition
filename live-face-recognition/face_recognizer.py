@@ -14,8 +14,6 @@ from face_detection_data import FaceDetectionData
 class FaceRecognizer:
     def __init__(self, config):
         self.config = config
-
-        # TODO better way of storing these: name, image, face_encoding
         self.known_face_encodings = []
         self.known_face_names = []
 
@@ -49,7 +47,6 @@ class FaceRecognizer:
                 name = self.known_face_names[best_match_index]
             face_names.append(name)
 
-        # TODO only draw rectangle when enabled from config
         for (top, right, bottom, left), name in zip(face_locations, face_names):
             top *= 4
             right *= 4

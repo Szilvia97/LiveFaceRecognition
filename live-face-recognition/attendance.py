@@ -1,7 +1,7 @@
 from math import dist
 import numpy as np
 from face_recognizer import FaceRecognizer
-from live_recognizer import LiveeeeRecognizer
+from live_recognizer import MyLiveRecognizer
 import cv2
 from pathlib import Path
 from camera_stream import CameraStream
@@ -20,7 +20,7 @@ class Attendance:
         self.camera_streamer = CameraStream(config)
 
         self.face_rec = FaceRecognizer(config)
-        self.live_rec = LiveeeeRecognizer(config)
+        self.live_rec = MyLiveRecognizer(config)
 
         self.started = False
         self.thread = threading.Thread(
@@ -80,15 +80,18 @@ class Attendance:
                         detection_cog = detection.get_COG()
 
                         if dist(face_cog, detection_cog) < 100:
+                            items = face.name.split('_')
+
+                            if not items:
+                                return
+                            
                             if face.name not in self.identified_student_list and detection.text == 'real' and face.name != 'Unknown':
                                 self.identified_student_list.append(face.name)
 
-                                items = face.name.split('_')
-
                                 studentData = {'isAttendanceRecovery': False,
                                                'neptunId': items[0],
-                                               'profile': items[2],
-                                               'studentName': items[1]
+                                               'studentName': items[1],
+                                               'profile': items[2]
                                                }
 
                                 print(self.session_data)
@@ -99,18 +102,22 @@ class Attendance:
                                                         studentData)
                                 print(result)
 
-                            cv2.rectangle(
-                                frame, (face.left, face.top), (face.right, face.bottom), (0, 255, 0), 2)
-                            cv2.putText(frame, items[1] + " - " + detection.text, (face.left + 6, face.bottom - 6),
-                                        cv2.FONT_HERSHEY_DUPLEX, 1.0,
-                                        (255, 255, 255), 1)
 
-                            if detection.text == 'fake' or items[1] == 'Unknown':
+                            if detection.text == 'fake' or items[0] == 'Unknown':
                                 cv2.rectangle(
                                     frame, (face.left, face.top), (face.right, face.bottom), (0, 0, 255), 2)
+                                cv2.putText(frame, items[0] + " - " + detection.text, (face.left + 6, face.bottom - 6),
+                                            cv2.FONT_HERSHEY_DUPLEX, 1.0,
+                                            (255, 255, 255), 1)
+
+                            else:
+                                cv2.rectangle(
+                                    frame, (face.left, face.top), (face.right, face.bottom), (0, 255, 0), 2)
                                 cv2.putText(frame, items[1] + " - " + detection.text, (face.left + 6, face.bottom - 6),
                                             cv2.FONT_HERSHEY_DUPLEX, 1.0,
                                             (255, 255, 255), 1)
+
+                            
 
                             
 
