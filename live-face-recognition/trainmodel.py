@@ -1,15 +1,15 @@
 # import matplotlib
 # matplotlib.use("Agg")
-
 # from livenessnet import LivenessNet
 # from sklearn.preprocessing import LabelEncoder
-# #from keras.models import model_from_json
+# from keras.models import model_from_json
 # import tensorflowjs as tfjs
 # from sklearn.model_selection import train_test_split
 # from sklearn.metrics import classification_report
 # from keras.preprocessing.image import ImageDataGenerator
-# from keras.optimizers import Adam
+# from keras.optimizers import adam_v2
 # from keras.utils import np_utils
+# from keras.layers import BatchNormalization
 # from imutils import paths
 # import matplotlib.pyplot as plt
 # import numpy as np
@@ -64,7 +64,7 @@
 # 	horizontal_flip=True, fill_mode="nearest")
 
 # print("Compiling Model...")
-# opt = Adam(lr=init_lr, decay=init_lr/epochs)
+# opt = adam_v2.Adam(lr=init_lr, decay=init_lr/epochs)
 
 # model = LivenessNet.build(width=32, height=32, depth=3, classes=len(le.classes_))
 # model.compile(loss="binary_crossentropy", optimizer=opt, metrics=["accuracy"])

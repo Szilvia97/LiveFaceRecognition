@@ -17,7 +17,7 @@ class FaceRecognizer:
         self.known_face_encodings = []
         self.known_face_names = []
 
-        for file in Path("recognize-images").glob('*.png'):
+        for file in Path("student-recognize-images").glob('*.png'):
             image = face_recognition.load_image_file(file)
             face_encoding = face_recognition.face_encodings(image)[0]
 
@@ -43,6 +43,7 @@ class FaceRecognizer:
             name = "Unknown"
             face_distances = face_recognition.face_distance(self.known_face_encodings, face_encoding)
             best_match_index = np.argmin(face_distances)
+            
             if matches[best_match_index]:
                 name = self.known_face_names[best_match_index]
             face_names.append(name)

@@ -74,7 +74,7 @@ class SimpleGui:
         ]
 
         
-        self.window = psg.Window('Attendance monitor',
+        self.window = psg.Window('Jelenlétkezelő',
                                  self.layout, font=self.font)
 
     

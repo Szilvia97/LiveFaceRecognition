@@ -36,8 +36,8 @@ class RegisterGui:
             [psg.Text(self.select_neptun_id_label)],
             [psg.Input(key='neptun_id', size=self.selectable_size, enable_events=True)],
             [psg.Text(size=(25, 1), k='-OUTPUT-')],
-            [psg.Button(self.button_exit, size=self.button_size)],
             [psg.Button(self.button_save, size=self.button_size)],
+            [psg.Button(self.button_exit, size=self.button_size)],
         ]
         
         self.layout = [
@@ -66,7 +66,7 @@ class RegisterGui:
 
             if event == self.button_save:
                 if values['class'] != "" and values['name'] != "" and values['neptun_id'] != "":
-                    cv2.imwrite('recognize-images/' + values['neptun_id'] + "_" + values['name'] + "_" + values['class'] + '.png', frame)
+                    cv2.imwrite('student-recognize-images/' + values['neptun_id'] + "_" + values['name'] + "_" + values['class'] + '.png', frame)
                     psg.popup('OK', 'Diák mentve!')
                 else:
                     psg.popup('Hiba', 'Minden mező kitöltése kötelező!')
