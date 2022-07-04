@@ -69,7 +69,6 @@ class Attendance:
         while self.started:
             frame = self.camera_streamer.get_latest_frame()
 
-            # TODO: thread pool, this could be done in parallel
             self.face_list = self.face_rec.process_frame(frame)
             self.live_list = self.live_rec.process_frame(frame)
 
