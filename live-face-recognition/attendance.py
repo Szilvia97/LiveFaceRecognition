@@ -69,8 +69,8 @@ class Attendance:
         while self.started:
             frame = self.camera_streamer.get_latest_frame()
 
-            self.face_list = self.face_rec.process_frame(frame)
-            self.live_list = self.live_rec.process_frame(frame)
+            self.face_list = self.face_rec.face_recognition_process(frame)
+            self.live_list = self.live_rec.live_detection_process(frame)
 
             if self.face_list:
                 for face in self.face_list:

@@ -1,0 +1,92 @@
+%----------------------------------------------------------------------------
+\chapter{Irodalomkutatás} \label{chapter1}
+%----------------------------------------------------------------------------
+
+A témával kapcsolatos kifejezésekre keresve a szakirodalmi cikkek sokasága között, mint például \enquote{attendance monitor}, \enquote{attendance management system}, nagyon sok elméleti és gyakorlati megvalósítás lelhető fel. Többfajta rendszert kidolgoztak már az egyetemi jelenlétkezelés problémájának megoldására, amelyek általában az alkalmazott módszerek és technológiákban különböznek egymástól. 
+
+\section{RFID}
+
+Az \cite{1} cikkben az RFID-t (Rádiófrekvencia-azonosítás) alkalmazzák egy jelenlétkezelő rendszer megvalósításához. Az RFID segítségével egy újfajta technológia kerül alkalmazásra az egyetemi jelenlétkezelés terén, aminek előnyei között említjük a megbízhatóságot, az időmegtakarítást és a könnyen kezelhetőséget \cite{3}.
+
+Az RFID előnyei közé tartozik főkent az automatizált azonosítás, valamint adatgyűjtés. Az RFID technológiát már évtizedekkel ezelőtt is ismerték, azonban csak az utóbbi néhány évben kezdték el alkalmazni és továbbfejleszteni minél szélesebb körben, mivel korábban a költsége volt az ami korlátozta felhasználását \cite{2}.
+
+Az RFID rendszerek négy komponensből állnak:
+\begin{itemize}
+			\item RFID olvasó (RFID Reader)
+			\item RFID címke (RFID tag)
+			\item RFID köztes szoftver (RFID Middleware)
+			\item adatbázis (Database Storage)
+\end{itemize}
+
+Az olvasó, amit más néven lekérdezőnek is nevezünk, feladata, hogy antennákon keresztül rádiófrekvenciás adatokat tud küldeni és fogadni a címkékből. Egy olvasónak akár több antennája is lehet, amelyek feladata a rádióhullámok küldése és vétele. A címke az adatokat tároló mikrochipből, egy hordozóból és egy antennából tevődik össze. Ebbe van felszerelve a chip és az antenna. Az RFID Middleware a rendszer azon része, amely megtisztítja és kiszűri a nyers RFID-értékeket. Maga az olvasótól kapja az adatokat, majd különböző módszereket alkalmaz, hogy a beérkezett adatokból csak a hasznos információkat gyűjtse be. A megtisztított rekordok, ideértve a tag-ek és az olvasó azonosítóit is, illetve a leolvasott időbélyeget, mentésre kerülnek az adatbázisba \cite{1}. Ez a mechanizmusa az RFID-t használó jelenlétkezelő rendszereknek. Összességében minden diák rendelkezik egy azonosító eszközzel, a leolvasott adatok mentésre kerülnek az adatbázisba, ahonnan bármikor megjeleníthető lesz egy adott felhasználói felületen.
+A tanulmányozott cikkben említett módszer működőképes megoldást nyújt, azonban vannak olyan hátrányai, ami miatt mi nem ezt a megoldást választottuk. Hátrányai közé tartozik, hogy az RFID-t alkalmazó megoldáshoz szükség van bizonyos hardver eszközökre, amelyeknek anyagi vonzata is van, mindemellett pedig egy rögzített rendszerről beszélünk. Egyetemi szinten ez azt jelenti, hogy mind a termek, mind pedig a diákoknak rendelkezniük kell a rendszer működését biztosító eszközökkel. Amennyiben ezek az akadályok áthidalhatóak, a megoldás alkalmazható az egyetemi jelenlét hatékony kezelésére.
+
+
+
+\section{Biometrikus azonosítás}
+
+A biometrikus azonosítást alkalmazó rendszerek esetén az ember valamilyen egyedi sajátosságáról veszünk mintát (ujjlenyomat, retina, hang stb.), ezek kerülnek tárolásra miután digitális adattá lettek konvertálva. Az aktuális mintát fogja összehasonlítani a már meglévő mintákkal, melyek tárolva vannak az adatbázisban.
+A hivatalos megfogalmazás alapján: \enquote{a biometria az alapján azonosít, ami az ember maga, nem pedig az alapján, amit tud (kód, jelszó), vagy amije van (kártya, távirányító)} \cite{5}.
+
+\subsection{Ujjlenyomat}
+
+A \cite{4} cikkben bemutatott megvalósítás biometrikus adatot használ fel, ujjlenyomat formájában a hallgatók azonosítására. A tárgyalt rendszer működtetéséhez nincs szükség a tanár beavatkozására, illetve mivel maga az eszköz hordozható formában lett kivitelezve, amely akkumulátorral üzemeltethető, nincs helyhez kötve, így akár óraközben is tudja jelezni a hallgató órai jelenlétét. A megoldás egyszerű: a diák megérinti az érzékelő felületet, és az eszköz feladata begyűjteni a ujjlenyomatokat. Az információkat egy USB csatlakozón keresztül lehet csatlakoztatni a számítógéphez. A tanár számára rendelkezésre áll egy felhasználói felület, ahol az eszközt és a jelenléteket is az ellenőrzése alatt tudja tartani.
+
+A rendszer fő komponense a ujjlenyomat olvasó modul, ezenkívül egy Real Time Clock-ból (RTC), a gombokból és a grafikus folyadékkristályos kijelzőből (GLCD) áll, és mindezt egy mikrovezérlő irányít. A kijelző az aktuális diák jelenléti állapotának megjelenítéséért felel. Ezek az állapotok a sikeres párosítás, nem sikeres, vagy már jelentkezett. \cite{4}.
+Ez az eszköz meghatározott ideig képes tárolni az adatokat, csak akkor kell számítógéphez csatlakoztatni, ha egy összesítést szeretnénk kapni, esetleg ki szeretnénk menteni azokat.
+Elmondhatjuk, hogy a rendszer eleget tesz a hatékony jelenlétkezelés elvárásainak, mindemellett megbízhatóbb megoldás, mint az RFID-val történő megközelítés, mivel így biztosított az, hogy adott diák csak saját jelenlétét tudja igazolni, ellenben amikor egy eszközzel kell ezt megtenni, ami könnyen adatható és felhasználható más személyek által is.
+
+Az említett rendszernek több előnyét is megemlíthetjük: gyorsaság, időtakaréskosság, megbízhatóság. Ezek mellett egyik legnagyobb előnye, hogy az óra folyamán történő jelenlétek bevitele nem igényli a tanár beavatkozását és nem zavarja az óra menetét.
+
+Hogy miért nem alkalmaztunk mégsem ujjlenyomat alapú azonosítást a saját rendszerünkben, egyszerű magyarázata van: mint minden biometrikus azonosítást lehetővé tévő rendszer különleges hardver eszközöket igényel, amelyek beszerzése jelentős pénzösszegbe kerül, illetve higiéniai szempontból is kérdéses, hogy mennyire megfelől ezt a megoldást használni egy nagy létszámú egyetemi közösségben \cite{6}. 
+
+\subsection{Arcfelismerés}
+
+A \cite{7} cikkben egy szintén biometrikus azonosítást bemutató alkalmazásról lehet olvasni. Egy olyan rendszert mutatnak be, ahol arcfelismerést használnak a diákok azonosításra az órai jelenlétek követése végett. A rendszer azonosítani tudja a diákot digitális képből vagy videóforrásból is.
+
+Az azonosításnak két fő mozzanata van:
+\begin{itemize}
+			\item Az arc körvonalának megkeresése és a háttér eltávolítása.
+			\item Az azonosított arcot összehasonlítja az adatbázisban előzőleg eltárolt \enquote{mintákkal}. 
+\end{itemize}
+Az összehasonlítási eljárásra két matematikai transzformációkon és analízisen alapuló eljárást alkalmaznak. Az egyik az arcról készült képet vizsgálja, a másik pedig az arc különböző részeit keresi meg, mint az orr, szemek, száj, stb. azok egymástól mért távolságát és elhelyezkedését \cite{6}.
+
+A tanulmányozott cikkben egy hagyományos arcfelismerő rendszer lett megvalósítva. Először detektálja az arcot, azután felismeri/azonosítja.
+Megtörténik az érdekeltségi kör kiválasztása, ami azt jelenti, hogy körülvágja a megtalált arcot, eltávolítja a hátteret, majd összehasonlítja az adatbázisban szereplő adatokkal. 
+
+A rendszer fő alkotóeleme a kamera, ez felel az osztálytermi kép rögzítéséért, amik továbbítva lesznek a képjavító részhez. Javítás után a detektáló és felismerő algoritmusokon megy keresztül, majd miután megtörtént az azonosítás a jelenlét bekerül az adatbázisba. Ami a rendszer legnagyobb pozitívuma, hogy egyszerre több arcot detektál a képről, valamint össze van kötve az órarenddel, így meg tudja határozni a tantárgyat, az adott osztálycsoportot, a dátumot és az időt is.
+Mivel csak egy gombnyomásba kerül a tanárnak a jelenlét rögzítése, nagyon sok idő és adminisztratív munka spórolható meg. A diákok jelenléteihez hozzáférhetnek ők maguk, a tanárok, de akár a szülők is.
+
+A képek készítése folyamatos, több kép is készül, hogy biztosan minden arc detektálva legyen a teremben.
+Hogy a hibás detektálást a minimálisra csökkentsék, a bőr szerinti osztályozást alkalmazzák, azaz a bőr képpontjait megtartják, és a kép többi része fekete színt kap \cite{7}. 
+
+Az ujjlenyomat általi azonosítást használó rendszerrel szemben a tárgyalt megoldás sokkal több előnnyel rendelkezik. Fő előnye (főleg a vírusos időszakokat szem előtt tartva), hogy nincs fizikai érintkezés a diák és az eszköz között. Az is kiemelkedő előnynek számít, hogy egyszerre több arcot is tud detektálni, így sokkal hatékonyabb az előző megoldással szemben, ez azonban akár hátránya is lehet a rendszernek.
+
+Mindezek mellett komoly hátrányt jelenthet a rendszer esetén, ha egy diák arca nem lesz látható az óra folyamán, így a jelenléte nem kerül rögzítésre. Ami méginkább gondot okoz az a jogi és adatvédelmi problémák. Ezt azt jelenti, hogy jogi következményei lehetnek, ha a diák arcának detektálása az előzőleges beleegyezése nélkül történt. Mindemellett a rendszer működését befolyásolhatják a különböző fényviszonyok, és viszonylag egyszerűen \enquote{átverhető} egy fotóval \cite{8}.
+
+
+\section{Következtetés}
+
+Számos cikk között kutatva a témában, sikerült levonni olyan következtetéseket, amelyek alátámasztják egy hatékony és megbízható rendszerrel szembeni alapelvárásokat.
+Ezen következtetések alapján kimondhatjuk, hogy egy hatékony jelenlétkezelő rendszer a következő elvárásoknak kell eleget tegyen:
+\begin{itemize}
+	\item {Azonosítás: egyedi és nehezen kijátszható azonosító.}
+	\item {Eszköz: mindenki számára elérhető és költséghatékony.}
+	\item {Adattárolás: naprakész, valós idejű adatbázis.}
+	\item {Gyorsaság:  helyesen detektálni és rögzíteni a diák jelenlétét minél rövidebb idő alatt.}
+\end{itemize}
+
+A jól működő rendszer fő tulajdonságai: egyszerűség, gyorsaság, hatékonyság. Ezek a legfontosabb dolgok, amit egy konzisztens, egyetemi jelenlétkezelő alkalmazás esetében szem előtt kell tartanunk.
+
+Következtetésként elmondható, hogy egy jól használható jelenlétkezelő rendszer létrehozásakor néha olyan kompromisszumokra van szükség, amely során egyik tulajdonság alulmaradása mellett egy másik felerősödik. Erre jó példa a biztonság és a könnyen használhatóság közötti egyensúly megtalálása. Nagyon sok esetben áldozatokra van szükség, ahogy esetünkben is, egy biometrikus adat kerül vételezésre, azaz a diák arca, így ez sok helyen GDPR problémákba ütközhet. Ugyanakkor ennek előnye, hogy nem lehet kijátszani a rendszert. Áldozatot jelent az is, hogy egy mobilapplikáció áll a felhasználó rendelkezésére, így annak használathoz elengedhetetlen a saját eszközére való telepítés.
+
+A kérdés csak az, hogy mekkora lehet az áldozat, amit annak érdekében hozunk, hogy egy biztonságos, gyorsan és egyszerűen kezelhető rendszert tudjunk megalkotni.
+
+
+
+
+
+
+
+
+

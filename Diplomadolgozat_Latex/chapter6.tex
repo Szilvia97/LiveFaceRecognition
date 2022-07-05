@@ -1,0 +1,124 @@
+%----------------------------------------------------------------------------
+\chapter{Szoftver követelmények} \label{chapter6}
+%----------------------------------------------------------------------------
+
+A különböző szoftver követelményeket tekintve a Tanár és Diák mobilalkalmazások egyetlen mozzanatban változtak: 
+
+\begin{itemize}
+    \item {Nem a Diák applikáció feladata a diákazonosító létrehozása.}
+    \item {A diák azonosítása és a jelenlétek mentése az adatbázisba nem a Tanár applikáció feladata.}
+\end{itemize}
+
+\section{Felhasználói követelmények}
+
+\subparagraph* {Arcfelismerő és életszerűség-érzékelő modul}\
+\newline
+\begin{itemize}
+    \item {A diákok azonosításához szükséges képek mentése, Neptun azonosító, név és szak megadásával.}
+    \item {Diákok azonosítása, az arc bekeretezésével és a név feltüntetésével, majd a jelenlét mentése.}
+\end{itemize}
+
+\subparagraph* {Diák alkalmazás}\
+\newline
+\begin{itemize}
+    \item {Regisztráció és bejelentkezés, ami lehetővé teszi, hogy a diák bekerüljön a rendszerbe.}
+	\item {Az órai jelenlétek utánkövetésének lehetősége, ami segít, hogy a diák bármikor megnézze saját jelenléteit és azok időpontját.}
+	\item {Tanárnak való e-mail küldés.}
+	\item {Belépés a Google tanterembe.}
+	\item {Belépés a Neptun-ba.}\\
+\end{itemize}
+
+\subparagraph*{Tanár alkalmazás}
+\begin{itemize}
+	\item {Regisztráció és bejelentkezés, ami lehetővé teszi, hogy a tanár bekerüljön a rendszerbe.}
+	\item {A jelenlétek megtekintése, keresési lehetőség név alapján.}
+	\item {Részletes jelenlétek és azok időpontjának  megtekintése.}
+	\item {Jelenlétek kimentése (letöltése), választható formátumban.}
+	\item {Belépés a Google tanterembe.}
+	\item {Csoportos e-mail küldése a diákoknak.}
+	\item {Naptáresemény létrehozása és elküldése a diák számára.}\\
+\end{itemize}
+
+\subparagraph*{Adminisztrátor}
+
+\begin{itemize}
+	\item {Adatok karbantartása.}
+	\item {Létrehozza a tantárgylistát, társítja a tanárokhoz a tantárgyakat, valamint létrehozza a Google tantermet minden tantárgyhoz.}\\
+\end{itemize}
+
+
+\section{Rendszer követelmények}
+\subsection{Funkcionális követelmények}
+
+\subparagraph*{Arcfelismerő és életszerűség-érzékelő modul}
+\begin{itemize}
+    \item Fényképek mentése: Kiválasztva a szakot, megadva a nevet és a Neptun azonosítót a diákról készül egy fénykép, ami mentésre kerül az előzőleg megadott adatok alapján elnevezve.
+    \item Jelenlétek mentése: Kiválasztva a tárgyat, annak típusát, a szakot, az aktuális hetet és a termet, elindul a kamera, ami által azonosítva lesznek a diákok, azt követően jelenlétük mentésre kerül az adatbázisba.
+\end{itemize}
+
+
+\subparagraph*{Diák alkalmazás}
+\begin{itemize}
+    \item {Regisztráció és adatok validálása: szak kiválasztása legördülő listából, teljes név, pontosan 6 karakter hosszúságú Neptun azonosító, e-mail cím, amely eleget tesz a formátumnak, minimum 6 karakter hosszúságú jelszó, majd ezek tárolása NoSQL adatbázisban, a \enquote{Regisztráció} gomb lenyomásával.}
+
+	\item {Bejelentkezés: a korábban regisztrált e-mail és jelszó párossal, a \enquote{Bejelentkezés} gomb lenyomásával.}
+	
+	\item{\enquote{Elfelejtetted a jelszavad? Kattints ide!} szövegre kattintva lehetséges új jelszó beállítása, amit a regisztrált e-mail címre küldött linkkel tehet meg.}
+	
+	\item {E-mail cím visszaigazolása a regisztrált e-mailcímre elküldött link alapján, illetve amennyiben nem érkezett meg az e-mail, a \enquote{Visszaigazoló e-mail újraküldése} gombbal megismételhető a procedúra.}
+	
+	\item {\enquote{Jelenlét megtekintése} gombra kattintva, kiválasztható a tantárgy és annak típusa legördülő listából.}
+	
+	\item{A \enquote{Megjelenítés} gombra kattintva, láthatóvá válik a meglévő jelenlétek száma, és a részletes jelenléti adat egy listában: a hét és a beviteli dátum.}
+	
+	\item {\enquote{Egyéb alkalmazások} lehetőséget választva a diák három lehetséges opcióból választhat: \enquote{E-mail küldése a tanárnak}, ami lehetővé teszi a tanárnak való üzenetküldést a tanár nevének kiválasztása alapján, az e-mail cím ismerete nélkül. \enquote{Belépés a Google tanterembe} és \enquote{Belépés a Neptunba} opciók az adott alkalmazások megnyitását biztosítják.}\\
+\end{itemize}
+
+
+\subparagraph*{Tanár alkalmazás}
+\begin{itemize}
+	\item {Regisztráció és adatok validálása: teljes név, pontosan 6 karakter hosszúságú Neptun azonosító, e-mail cím, amely eleget tesz a formátumnak, minimum 6 karakter hosszúságú jelszó, majd ezek tárolása NoSQL adatbázisban, a \enquote{Regisztráció} gomb lenyomásával.}
+	
+	\item {Bejelentkezés: a korábban regisztrált e-mail és jelszó párossal, a \enquote{Bejelentkezés} gomb lenyomásával.}
+	
+	\item{\enquote{Elfelejtetted a jelszavad? Kattints ide!} szövegre kattintva lehetséges új jelszó beállítása, amit a regisztrált e-mail címre küldött linkkel tehet meg.}
+	
+	\item {\enquote{Korábbi jelenlétek megtekintése}: szak, tantárgy és annak típusának kiválasztásával egy listából, a 
+	\enquote{Diákok megjelenítése} gombra kattintva megjelenik a jelenléti lista a diákok neveivel, valamint egy keresősáv, amely lehetővé teszi a diákok neve alapján való keresést.}
+	
+	\item {Egy diákot kiválasztva további adatok megtekintésére van lehetőség a diák jelenléteivel kapcsolatban, amely által látható a diák neve, és jelenléti adatai egy listában: hét, dátum.}
+	
+	\item {\enquote{Jelenlétek exportálása} menüpont lehetővé teszi tantárgy és formátum függvényében való letöltést, ahol a kívánt tantárgyat egy legördülő listából választható, valamint annak formátuma is.}
+	
+	\item {\enquote{Belépés a Google tanterembe}: kiválasztva az adott tantárgyat, az alkalmazáson keresztül megnyitható a tanterem linkje.}
+	
+	\item {\enquote{Naptáresemény létrehozása} opció lehetővé teszi adott tantárggyal kapcsolatos esemény létrehozását, majd kiküldését a kiválasztott Google tanterem diákjainak.}
+	
+	\item {Az \enquote{E-mail küldése} lehetőség a csoportos e-mail küldést jelenti a diákok felé, szak és tantárgy függvényben.}\\
+\end{itemize}
+
+
+\subparagraph*{Adminisztrátor}
+\begin{itemize}
+	\item{Hozzáférés az adatbázisban tárolt adatokhoz.}
+	\item{A tanár tantárgyainak kezelése: tantárgy hozzárendelése a tanárhoz az adatbázisban a már meglévő tantárgylistához.}
+	\item{Google tanterem kezelése: minden tantárgyhoz létrehoz egy tantermet, és ennek URL címét szintén tárolja az adatbázisban lévő erre a célra létrehozott listában.}\\
+\end{itemize}
+
+
+\subsubsection{Nem-funkcionális követelmények}
+
+\begin{itemize}
+    \item {Az arcfelismerő és életszerűség-érzékelő modul futtatásához szükség van egy webkamerával felszerelt számítógépre vagy egy laptopra ami szintén rendelkezik webkamerával.}
+    \item {A diákok fényképeinek lementéséhez szükséges az elérhető lokális tárhely.}
+    \item {A jelenlétek bevitelét, tárolását, valamint lekérését Firebase adatbázis biztosítja, aminek eléréséhez internetkapcsolat szükségeltetik.}
+	\item {Az alkalmazások futtatása Android operációs rendszert támogató eszközön lehetséges, mindkét alkalmazás esetében  minimum Android 4.1 Jelly Bean (16. API szint) szükséges.}
+	\item {A diák és tanár regisztrált adatainak tárolása ugyanúgy a valós idejű adatbázisban történik.}
+	\item{Az azonosítás szintén a Firebase nyújtotta funkcióval valósul meg.}
+	\item {Az aktuális jelenlétek lekérdezéséhez, valamint a regisztráció során küldött e-mail visszaigazolásához szintén internetkapcsolat szükséges.}
+	\item {A Google tanterembe való belépéshez az internetkapcsolat mellett egy aktív Google fiókra is szükség van.}
+	\item{A jelenléti adatok xlsx, pdf vagy csv formátumban exportálhatóak, ez a Google Apps szkripten keresztül valósul meg.}
+	\item{A fájlok letöltése után, amennyiben meg szeretnénk nyitni, szükség van a megjelenítést lehetővé tévő alkalmazásra, például Excel.}
+	\item{Az e-mail küldési lehetőséghez aktív e-mail fiókra van szükség, illetve egy e-mail küldő alkalmazás meglétére az adott eszközön.}
+	\item{A naptáresemény létrehozásához, valamint megtekintéséhez egy Naptár alkalmazás szükségeltetik, a kiküldött események megtekintéséhez kifejezetten a Google naptár alkalmazásra van szükség.}
+\end{itemize}

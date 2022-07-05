@@ -27,89 +27,49 @@ class MyLiveRecognizer:
 
         self.confidence = 0.7
 
-    # def process_frame(self, image):
-    #     (h, w) = image.shape[:2]
-    #     blob = cv2.dnn.blobFromImage(cv2.resize(image, (300, 300)),
-    #                                  1.0,
-    #                                  (300, 300),
-    #                                  (104.0, 177.0, 123.0))
-
-    #     self.net.setInput(blob)
-    #     detections = self.net.forward()
-
-    #     detection_list = []
-    #     for i in range(0, detections.shape[2]):
-    #         confidence = detections[0, 0, i, 2]
-
-    #         if confidence > self.confidence:
-    #             box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
-    #             (startX, startY, endX, endY) = box.astype('int')
-
-    #             startX = max(0, startX)
-    #             startY = max(0, startY)
-    #             endX = min(w, endX)
-    #             endY = min(h, endY)
-
-    #             try:
-    #                 face = image[startY:endY, startX:endX]
-    #                 face = cv2.resize(face, (32, 32))
-    #                 face = face.astype('float') / 255.0
-    #                 face = img_to_array(face)
-    #                 face = np.expand_dims(face, axis=0)
-            
-    #                 predictions = self.model.predict(face)[0]
-    #                 max_index = np.argmax(predictions)
-    #                 score = predictions[max_index]
-
-    #                 if score > self.min_live_score and max_index == self.is_live:
-    #                     detection_list.append(LiveDetectionData(
-    #                         score, 'real', startX, startY, endX, endY))
-    #                 else:
-    #                     detection_list.append(LiveDetectionData(
-    #                         score, 'fake', startX, startY, endX, endY))
-
-    #             except Exception as e:
-    #                 print(str(e))
-
-    #     return detection_list
-
-    def process_frame(self, frame):
-        (h, w) = frame.shape[:2]
-        blob = cv2.dnn.blobFromImage(cv2.resize(frame, (300, 300)), 1.0,
-                                     (300, 300), (104.0, 177.0, 123.0))
+    def live_detection_process(self, image):
+        (h, w) = image.shape[:2]
+        blob = cv2.dnn.blobFromImage(cv2.resize(image, (300, 300)),
+                                     1.0,
+                                     (300, 300),
+                                     (104.0, 177.0, 123.0))
 
         self.net.setInput(blob)
         detections = self.net.forward()
 
         detection_list = []
-
         for i in range(0, detections.shape[2]):
             confidence = detections[0, 0, i, 2]
 
             if confidence > self.confidence:
                 box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
-                (startX, startY, endX, endY) = box.astype("int")
+                (startX, startY, endX, endY) = box.astype('int')
 
                 startX = max(0, startX)
                 startY = max(0, startY)
                 endX = min(w, endX)
                 endY = min(h, endY)
 
-                face = frame[startY:endY, startX:endX]
-                face = cv2.resize(face, (32, 32))
-                face = face.astype("float") / 255.0
-                face = img_to_array(face)
-                face = np.expand_dims(face, axis=0)
+                try:
+                    face = image[startY:endY, startX:endX]
+                    face = cv2.resize(face, (32, 32))
+                    face = face.astype('float') / 255.0
+                    face = img_to_array(face)
+                    face = np.expand_dims(face, axis=0)
+            
+                    predictions = self.model.predict(face)[0]
+                    max_index = np.argmax(predictions)
+                    score = predictions[max_index]
 
-                predictions = self.model.predict(face)[0]
-                j = np.argmax(predictions)
-                score = predictions[j]
+                    if score > self.min_live_score and max_index == self.is_live:
+                        detection_list.append(LiveDetectionData(
+                            score, 'real', startX, startY, endX, endY))
+                    else:
+                        detection_list.append(LiveDetectionData(
+                            score, 'fake', startX, startY, endX, endY))
 
-                if score > self.min_live_score and j == self.is_live:
-                    detection_list.append(LiveDetectionData(score, 'real', startX, startY, endX, endY))
-
-                else:
-                    detection_list.append(LiveDetectionData(score, 'fake', startX, startY, endX, endY))
+                except Exception as e:
+                    print(str(e))
 
         return detection_list
 
