@@ -23,7 +23,7 @@ class SimpleGui:
         self.attendance = Attendance(self.config)
 
 
-        psg.theme('LightGreen3')
+        psg.theme('LightGreen3')    
 
         self.button_start = self.config['BUTTON_START_LABEL']
         self.button_stop = self.config['BUTTON_STOP_LABEL']
